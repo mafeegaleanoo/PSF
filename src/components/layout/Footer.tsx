@@ -1,23 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import Logo from "@/components/ui/Logo";
-
-const links = {
-  Programas: [
-    { href: "/cpo",      label: "Certificación CPO" },
-    { href: "/cpi",      label: "Certificación CPI" },
-    { href: "/academia", label: "Academia PSF" },
-  ],
-  Empresa: [
-    { href: "/nosotros",  label: "Nosotros" },
-    { href: "/contacto",  label: "Contacto" },
-  ],
-  Legal: [
-    { href: "/privacidad",  label: "Privacidad" },
-    { href: "/terminos",    label: "Términos" },
-  ],
-};
+import { useLang } from "@/lib/i18n";
 
 export default function Footer() {
+  const { t } = useLang();
+  const { tagline, columns, rights } = t.footer;
+
   return (
     <footer className="bg-navy text-white/70">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
@@ -25,20 +15,17 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <Logo variant="dark" width={220} />
-            <p className="mt-5 text-sm leading-relaxed text-white/50">
-              La plataforma líder en educación de piscinas en español, diseñada para
-              profesionales Latinos.
-            </p>
+            <p className="mt-5 text-sm leading-relaxed text-white/50">{tagline}</p>
           </div>
 
           {/* Link columns */}
-          {Object.entries(links).map(([heading, items]) => (
+          {Object.entries(columns).map(([heading, items]) => (
             <div key={heading}>
               <h4 className="text-[0.72rem] font-bold tracking-[0.15em] uppercase text-brand-blue mb-4">
                 {heading}
               </h4>
               <ul className="flex flex-col gap-2.5">
-                {items.map(({ href, label }) => (
+                {(items as unknown as { href: string; label: string }[]).map(({ href, label }) => (
                   <li key={href}>
                     <Link
                       href={href}
@@ -56,7 +43,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/30 tracking-wide uppercase">
           <p>© {new Date().getFullYear()} Piscinas Sin Fronteras · by The Pool Scientist</p>
-          <p>Todos los derechos reservados</p>
+          <p>{rights}</p>
         </div>
       </div>
     </footer>

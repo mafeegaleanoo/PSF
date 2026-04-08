@@ -6,39 +6,34 @@ import { useState } from "react";
 import Logo from "@/components/ui/Logo";
 import Button from "@/components/ui/Button";
 import { cn } from "@/lib/utils/cn";
-import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { href: "/",         label: "Inicio" },
-  { href: "/cpo",      label: "CPO" },
-  { href: "/cpi",      label: "CPI" },
-  { href: "/academia", label: "Academia" },
-  { href: "/nosotros", label: "Nosotros" },
-];
+import { Menu, X, Globe } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const { lang, toggle, t } = useLang();
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-border">
-      <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-border">
+      <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+
         {/* Logo */}
         <Link href="/" className="flex items-center shrink-0">
-          <Logo variant="light" width={220} />
+          <Logo variant="light" width={180} />
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-6">
-          {navLinks.map(({ href, label }) => (
+        {/* Desktop nav links */}
+        <ul className="hidden lg:flex items-center gap-1">
+          {t.nav.links.map(({ href, label }) => (
             <li key={href}>
               <Link
                 href={href}
                 className={cn(
-                  "text-sm font-semibold tracking-wide transition-colors",
+                  "text-sm font-semibold px-3 py-1.5 rounded-lg transition-colors",
                   pathname === href
-                    ? "text-brand-blue"
-                    : "text-slate hover:text-brand-blue"
+                    ? "text-brand-blue bg-brand-blue/8"
+                    : "text-slate hover:text-navy hover:bg-surface"
                 )}
               >
                 {label}
@@ -47,31 +42,51 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center gap-3">
+        {/* Desktop right: toggle + auth */}
+        <div className="hidden lg:flex items-center gap-2">
+          {/* Language toggle */}
+          <button
+            onClick={toggle}
+            className="flex items-center gap-1.5 text-xs font-bold text-slate hover:text-brand-blue border border-border hover:border-brand-blue/40 rounded-lg px-2.5 py-1.5 transition-colors"
+            aria-label="Cambiar idioma / Change language"
+          >
+            <Globe size={13} />
+            {lang === "es" ? "EN" : "ES"}
+          </button>
+
           <Button href="/auth/login" variant="ghost" size="sm">
-            Iniciar Sesión
+            {t.nav.login}
           </Button>
           <Button href="/auth/signup" variant="primary" size="sm">
-            Inscríbete
+            {t.nav.signup}
           </Button>
         </div>
 
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden p-2 text-slate hover:text-brand-blue transition-colors"
-          onClick={() => setOpen(!open)}
-          aria-label="Abrir menú"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile: toggle + hamburger */}
+        <div className="flex lg:hidden items-center gap-2">
+          <button
+            onClick={toggle}
+            className="flex items-center gap-1 text-xs font-bold text-slate hover:text-brand-blue border border-border rounded-lg px-2 py-1.5 transition-colors"
+            aria-label="Cambiar idioma"
+          >
+            <Globe size={13} />
+            {lang === "es" ? "EN" : "ES"}
+          </button>
+          <button
+            className="p-2 text-slate hover:text-brand-blue transition-colors"
+            onClick={() => setOpen(!open)}
+            aria-label="Abrir menú"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-border bg-white px-4 pb-4">
+        <div className="lg:hidden border-t border-border bg-white px-4 pb-4">
           <ul className="flex flex-col gap-1 pt-3">
-            {navLinks.map(({ href, label }) => (
+            {t.nav.links.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
@@ -80,7 +95,7 @@ export default function Navbar() {
                     "block py-2.5 px-3 rounded-lg text-sm font-semibold transition-colors",
                     pathname === href
                       ? "text-brand-blue bg-brand-blue/8"
-                      : "text-slate hover:text-brand-blue hover:bg-surface"
+                      : "text-slate hover:text-navy hover:bg-surface"
                   )}
                 >
                   {label}
@@ -90,10 +105,10 @@ export default function Navbar() {
           </ul>
           <div className="flex flex-col gap-2 mt-4">
             <Button href="/auth/login" variant="outline" size="sm" className="w-full">
-              Iniciar Sesión
+              {t.nav.login}
             </Button>
             <Button href="/auth/signup" variant="primary" size="sm" className="w-full">
-              Inscríbete Ahora
+              {t.nav.signup}
             </Button>
           </div>
         </div>
