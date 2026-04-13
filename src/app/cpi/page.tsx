@@ -1,21 +1,16 @@
+"use client";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
+import { useLang } from "@/lib/i18n";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen, Search } from "lucide-react";
 
-const modules = [
-  "Fundamentos de inspección de piscinas y spas",
-  "Evaluación de sistemas de circulación y filtración",
-  "Inspección de sistemas de desinfección",
-  "Seguridad: barandas, cubiertas y drenajes",
-  "Inspección eléctrica básica en áreas acuáticas",
-  "Documentación y redacción de reportes",
-  "Regulaciones estatales y locales",
-  "Preparación para el examen CPI oficial",
-];
-
 export default function CpiPage() {
+  const { t } = useLang();
+  const c = t.cpi;
+
   return (
     <>
       <Navbar />
@@ -26,39 +21,30 @@ export default function CpiPage() {
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-[0.7rem] font-bold tracking-[0.18em] uppercase text-brand-cyan mb-4">
-                Certificación
+                {c.hero.eyebrow}
               </p>
               <h1 className="font-black text-[clamp(2rem,5vw,3.2rem)] leading-[1.1] tracking-tight text-white mb-5">
                 Certified Pool{" "}
                 <span className="text-gradient">Inspector (CPI®)</span>
               </h1>
-              <p className="text-white/60 text-base leading-relaxed mb-8 max-w-lg">
-                Amplía tus servicios como inspector certificado de piscinas y spas. Una credencial
-                de alto valor para profesionales independientes y empresas.
-              </p>
+              <p className="text-white/60 text-base leading-relaxed mb-8 max-w-lg">{c.hero.subtitle}</p>
               <div className="flex flex-wrap gap-3">
                 <Button href="/auth/signup" variant="primary" size="lg">
-                  Inscribirme ahora <ArrowRight size={18} />
+                  {c.hero.cta1} <ArrowRight size={18} />
                 </Button>
-                <Button
-                  href="/contacto"
-                  variant="outline"
-                  size="lg"
-                  className="border-white/30 text-white hover:bg-white/10 hover:text-white"
-                >
-                  Más información
+                <Button href="/contacto" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+                  {c.hero.cta2}
                 </Button>
               </div>
             </div>
 
-            {/* Info card */}
             <div className="bg-white/8 border border-white/12 rounded-2xl p-7">
               <div className="grid grid-cols-2 gap-5">
                 {[
-                  { icon: Clock,    label: "Duración",   value: "12 horas" },
-                  { icon: Award,    label: "Validez",    value: "3 años" },
-                  { icon: Users,    label: "Modalidad",  value: "Online / Presencial" },
-                  { icon: BookOpen, label: "Idioma",     value: "Español" },
+                  { icon: Clock,    label: c.card.duration, value: c.card.durationVal },
+                  { icon: Award,    label: c.card.validity,  value: c.card.validityVal },
+                  { icon: Users,    label: c.card.mode,      value: c.card.modeVal },
+                  { icon: BookOpen, label: c.card.language,  value: c.card.languageVal },
                 ].map(({ icon: Icon, label, value }) => (
                   <div key={label} className="flex items-start gap-3">
                     <div className="w-9 h-9 rounded-lg bg-gradient-brand flex items-center justify-center shrink-0">
@@ -72,28 +58,21 @@ export default function CpiPage() {
                 ))}
               </div>
               <div className="mt-6 pt-5 border-t border-white/10">
-                <p className="text-[0.65rem] text-white/40 uppercase tracking-wider mb-1">Precio</p>
+                <p className="text-[0.65rem] text-white/40 uppercase tracking-wider mb-1">{c.card.priceLabel}</p>
                 <p className="text-3xl font-black text-gradient">$199 USD</p>
-                <p className="text-xs text-white/40 mt-1">Examen incluido · Materiales incluidos</p>
+                <p className="text-xs text-white/40 mt-1">{c.card.priceNote}</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── What you'll learn ────────────────────────────── */}
+        {/* ── Modules ──────────────────────────────────────── */}
         <section className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <SectionHeader
-              label="Contenido del curso"
-              title="Lo que aprenderás"
-              description="Curriculum oficial CPI de PHTA, completamente en español."
-            />
+            <SectionHeader label={c.modules.label} title={c.modules.title} description={c.modules.desc} />
             <div className="mt-10 grid sm:grid-cols-2 gap-3">
-              {modules.map((mod, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-3 bg-white border border-border rounded-xl p-4"
-                >
+              {c.modules.items.map((mod, i) => (
+                <div key={i} className="flex items-start gap-3 bg-white border border-border rounded-xl p-4">
                   <Search size={17} className="text-brand-blue shrink-0 mt-0.5" />
                   <span className="text-sm text-navy font-medium">{mod}</span>
                 </div>
@@ -105,17 +84,9 @@ export default function CpiPage() {
         {/* ── Career value ─────────────────────────────────── */}
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <SectionHeader
-              label="Valor de carrera"
-              title="¿Por qué convertirte en CPI?"
-              center
-            />
+            <SectionHeader label={c.career.label} title={c.career.title} center />
             <div className="mt-10 grid sm:grid-cols-3 gap-6">
-              {[
-                { title: "Nuevos ingresos", desc: "Ofrece inspecciones de piscinas como servicio premium a hoteles, condominios y propiedades residenciales." },
-                { title: "Diferenciación", desc: "Destácate de la competencia con una credencial oficial que demuestra tu nivel de conocimiento y profesionalismo." },
-                { title: "Cumplimiento legal", desc: "Muchos estados requieren inspecciones por inspectores certificados. Conviértete en el experto de tu área." },
-              ].map(({ title, desc }) => (
+              {c.career.items.map(({ title, desc }) => (
                 <div key={title} className="rounded-2xl bg-surface border border-border p-6">
                   <div className="w-2 h-8 rounded-full bg-gradient-brand mb-4" />
                   <h3 className="font-bold text-navy text-base mb-2">{title}</h3>
@@ -129,19 +100,10 @@ export default function CpiPage() {
         {/* ── CTA ──────────────────────────────────────────── */}
         <section className="py-16 bg-gradient-brand">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="font-black text-[clamp(1.6rem,4vw,2.4rem)] text-white tracking-tight mb-4">
-              Conviértete en Inspector Certificado
-            </h2>
-            <p className="text-white/75 text-base mb-8">
-              Accede al material del curso de inmediato después de inscribirte.
-            </p>
-            <Button
-              href="/auth/signup"
-              variant="secondary"
-              size="lg"
-              className="bg-white text-brand-blue hover:bg-white/90"
-            >
-              Comenzar ahora <ArrowRight size={18} />
+            <h2 className="font-black text-[clamp(1.6rem,4vw,2.4rem)] text-white tracking-tight mb-4">{c.cta.title}</h2>
+            <p className="text-white/75 text-base mb-8">{c.cta.subtitle}</p>
+            <Button href="/auth/signup" variant="secondary" size="lg" className="bg-white text-brand-blue hover:bg-white/90">
+              {c.cta.cta} <ArrowRight size={18} />
             </Button>
           </div>
         </section>

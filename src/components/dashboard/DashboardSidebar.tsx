@@ -7,23 +7,22 @@ import { createClient } from "@/lib/supabase/client";
 import Logo from "@/components/ui/Logo";
 import { cn } from "@/lib/utils/cn";
 import { LayoutDashboard, BookOpen, Settings, LogOut, Menu, X } from "lucide-react";
+import { useLang } from "@/lib/i18n";
 
 interface Props {
   fullName: string | null;
   email: string;
 }
 
-const navItems = [
-  { href: "/dashboard",          label: "Dashboard",       icon: LayoutDashboard },
-  { href: "/dashboard/courses",  label: "Mis Cursos",      icon: BookOpen },
-  { href: "/dashboard/settings", label: "Configuración",   icon: Settings },
-];
+const navIcons = [LayoutDashboard, BookOpen, Settings];
 
 export default function DashboardSidebar({ fullName, email }: Props) {
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [signingOut, setSigningOut] = useState(false);
+  const { t } = useLang();
+  const c = t.dashboard.sidebar;
 
   async function handleSignOut() {
     setSigningOut(true);
@@ -39,16 +38,15 @@ export default function DashboardSidebar({ fullName, email }: Props) {
 
   const SidebarContent = () => (
     <div className="flex flex-col h-full">
-      {/* Logo */}
       <div className="px-6 py-5 border-b border-border">
         <Link href="/" onClick={() => setMobileOpen(false)}>
           <Logo variant="light" width={160} />
         </Link>
       </div>
 
-      {/* Nav */}
       <nav className="flex-1 px-3 py-4 space-y-1">
-        {navItems.map(({ href, label, icon: Icon }) => {
+        {c.nav.map(({ href, label }, i) => {
+          const Icon = navIcons[i];
           const active = pathname === href;
           return (
             <Link
@@ -57,9 +55,7 @@ export default function DashboardSidebar({ fullName, email }: Props) {
               onClick={() => setMobileOpen(false)}
               className={cn(
                 "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold transition-colors",
-                active
-                  ? "bg-brand-blue/10 text-brand-blue"
-                  : "text-slate hover:bg-surface hover:text-navy"
+                active ? "bg-brand-blue/10 text-brand-blue" : "text-slate hover:bg-surface hover:text-navy"
               )}
             >
               <Icon size={18} />
@@ -69,7 +65,6 @@ export default function DashboardSidebar({ fullName, email }: Props) {
         })}
       </nav>
 
-      {/* User + sign out */}
       <div className="px-3 py-4 border-t border-border space-y-1">
         <div className="flex items-center gap-3 px-3 py-2.5">
           <div className="w-8 h-8 rounded-full bg-gradient-brand flex items-center justify-center text-white text-xs font-bold shrink-0">
@@ -86,7 +81,7 @@ export default function DashboardSidebar({ fullName, email }: Props) {
           className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-semibold text-slate hover:bg-red-50 hover:text-red-500 transition-colors"
         >
           <LogOut size={18} />
-          {signingOut ? "Saliendo..." : "Cerrar sesión"}
+          {signingOut ? c.signingOut : c.signOut}
         </button>
       </div>
     </div>
@@ -94,32 +89,20 @@ export default function DashboardSidebar({ fullName, email }: Props) {
 
   return (
     <>
-      {/* Desktop sidebar */}
       <aside className="hidden md:flex flex-col w-64 shrink-0 bg-white border-r border-border fixed top-0 left-0 h-screen z-40">
         <SidebarContent />
       </aside>
 
-      {/* Mobile top bar */}
       <header className="md:hidden fixed top-0 left-0 right-0 h-14 bg-white border-b border-border flex items-center justify-between px-4 z-40">
-        <Link href="/">
-          <Logo variant="light" width={140} />
-        </Link>
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2 text-slate hover:text-brand-blue transition-colors"
-          aria-label="Abrir menú"
-        >
+        <Link href="/"><Logo variant="light" width={140} /></Link>
+        <button onClick={() => setMobileOpen(!mobileOpen)} className="p-2 text-slate hover:text-brand-blue transition-colors" aria-label="Abrir menú">
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </header>
 
-      {/* Mobile drawer */}
       {mobileOpen && (
         <>
-          <div
-            className="md:hidden fixed inset-0 bg-navy/40 z-40"
-            onClick={() => setMobileOpen(false)}
-          />
+          <div className="md:hidden fixed inset-0 bg-navy/40 z-40" onClick={() => setMobileOpen(false)} />
           <aside className="md:hidden fixed top-0 left-0 h-screen w-72 bg-white z-50 shadow-xl">
             <SidebarContent />
           </aside>
