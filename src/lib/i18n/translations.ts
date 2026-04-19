@@ -6,6 +6,7 @@ const es = {
       { href: "/cpo",      label: "CPO" },
       { href: "/cpi",      label: "CPI" },
       { href: "/academia", label: "Academia" },
+      { href: "/consultoria", label: "Consultoría" },
       { href: "/nosotros", label: "Nosotros" },
       { href: "/contacto", label: "Contacto" },
     ],
@@ -19,6 +20,7 @@ const es = {
         { href: "/cpo",      label: "Certificación CPO" },
         { href: "/cpi",      label: "Certificación CPI" },
         { href: "/academia", label: "Academia PSF" },
+        { href: "/consultoria", label: "Consultoría" },
       ],
       Empresa: [
         { href: "/nosotros", label: "Nosotros" },
@@ -106,6 +108,16 @@ const es = {
         "Preparación para el examen CPO oficial",
       ],
     },
+    locations: {
+      label: "Ubicaciones presenciales",
+      items: ["Lakewood, NJ", "Cherry Hill, NJ", "Somerset, NJ", "Toms River, NJ", "Morristown, NJ", "Austin, TX", "Canadá", "Caribe", "China", "México", "Islandia", "Taiwán", "Ucrania", "Chipre", "Reino Unido", "Europa (Múltiples ubicaciones)"]
+    },
+    pricing: {
+      label: "Valor competitivo",
+      standard: "Promedio de la industria: $350 - $475",
+      psf: "Precio PSF: $299",
+      note: "Ahorra más del 20% certificándote con nosotros."
+    },
     faq: {
       label: "Preguntas frecuentes",
       title: "Todo lo que necesitas saber",
@@ -115,6 +127,11 @@ const es = {
         { q: "¿Cuánto tiempo es válida la certificación?", a: "La certificación CPO es válida por 5 años. Ofrecemos cursos de renovación en español." },
         { q: "¿Qué pasa si no paso el examen la primera vez?", a: "Puedes retomar el examen sin costo adicional dentro de los primeros 90 días." },
       ],
+    },
+    gallery: {
+      label: "Clases Reales",
+      title: "Lo que vivimos en cada clase",
+      desc: "Profesionales reales, resultados reales. Así son nuestras certificaciones CPO: prácticas, en español y con instructores certificados.",
     },
     cta: { title: "¿Listo para obtener tu CPO?", subtitle: "Inscríbete hoy y obtén acceso inmediato al material del curso.", cta: "Comenzar ahora" },
   },
@@ -146,6 +163,16 @@ const es = {
         "Regulaciones estatales y locales",
         "Preparación para el examen CPI oficial",
       ],
+    },
+    locations: {
+      label: "Ubicaciones",
+      items: ["Virtual / Online", "Somerset, NJ", "Austin, TX", "Internacional (Online)"]
+    },
+    pricing: {
+      label: "Valor de la certificación",
+      standard: "Promedio mercado: hasta $395",
+      psf: "Precio PSF: $199",
+      note: "La mejor relación calidad-precio en español."
     },
     career: {
       label: "Valor de carrera",
@@ -393,6 +420,51 @@ const es = {
       },
     },
   },
+  consultoria: {
+    hero: {
+      eyebrow: "Servicios Profesionales",
+      title: "Consultoría Experta",
+      subtitle: "Soluciones estratégicas para la industria acuática. Desde diseño arquitectónico hasta cumplimiento regulatorio.",
+      cta: "Solicitar Consultoría",
+    },
+    servicesLabel: "Nuestras Especialidades",
+    servicesTitle: "Servicios Estratégicos",
+    servicesDesc: "Trabajamos con los mejores consultores de la industria para ofrecer soluciones de primer nivel.",
+    servicesLink: "Más información",
+    partnerLabel: "En asociación con líderes mundiales",
+    cta: {
+      title: "¿Listo para elevar el estándar de su instalación?",
+      subtitle: "Nuestro equipo de expertos está listo para ayudarlo a optimizar sus operaciones y cumplir con todas las normativas vigentes.",
+      cta: "Agendar una consulta",
+    },
+    services: [
+      { 
+        title: "Gestión de Piscinas", 
+        desc: "Consultoría para asegurar que las instalaciones operen de manera segura y eficiente, cubriendo mantenimiento y regulaciones.",
+        href: "https://www.nac4h2o.com/new-york/pool-management-consulting"
+      },
+      { 
+        title: "Diseño y Arquitectura", 
+        desc: "Soluciones de diseño, ingeniería y operación para instalaciones acuáticas comerciales y municipales.",
+        href: "https://counsilmanhunsaker.com/"
+      },
+      { 
+        title: "Soluciones Globales de Bienestar", 
+        desc: "Líder mundial en soluciones de agua y bienestar, especializado en diseño de piscinas y spas e ingeniería de procesos.",
+        href: "https://barrandwray.com/"
+      },
+      { 
+        title: "Información Estratégica", 
+        desc: "Análisis del mercado para ayudar a las organizaciones a navegar desafíos complejos y oportunidades de crecimiento.",
+        href: "https://aquaticconsultantsofamerica.com/"
+      },
+      { 
+        title: "Regulaciones y Peritaje", 
+        desc: "Consultoría en todos los aspectos de regulaciones de piscinas, mantenimiento y testimonio de expertos.",
+        href: "https://pooloperationmanagement.com/consulting/"
+      }
+    ]
+  },
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -402,6 +474,7 @@ const en: any = {
       { href: "/cpo",      label: "CPO" },
       { href: "/cpi",      label: "CPI" },
       { href: "/academia", label: "Academy" },
+      { href: "/consultoria", label: "Consulting" },
       { href: "/nosotros", label: "About Us" },
       { href: "/contacto", label: "Contact" },
     ],
@@ -415,6 +488,7 @@ const en: any = {
         { href: "/cpo",      label: "CPO Certification" },
         { href: "/cpi",      label: "CPI Certification" },
         { href: "/academia", label: "PSF Academy" },
+        { href: "/consultoria", label: "Consulting" },
       ],
       Company: [
         { href: "/nosotros", label: "About Us" },
@@ -502,6 +576,16 @@ const en: any = {
         "Preparation for the official CPO exam",
       ],
     },
+    locations: {
+      label: "In-person locations",
+      items: ["Lakewood, NJ", "Cherry Hill, NJ", "Somerset, NJ", "Toms River, NJ", "Morristown, NJ", "Austin, TX", "Canada", "Caribbean", "China", "Mexico", "Iceland", "Taiwan", "Ukraine", "Cyprus", "United Kingdom", "Europe (Multiple locations)"]
+    },
+    pricing: {
+      label: "Competitive Value",
+      standard: "Industry average: $350 - $475",
+      psf: "PSF Price: $299",
+      note: "Save over 20% by getting certified with us."
+    },
     faq: {
       label: "Frequently asked questions",
       title: "Everything you need to know",
@@ -511,6 +595,11 @@ const en: any = {
         { q: "How long is the certification valid?", a: "The CPO certification is valid for 5 years. We offer renewal courses in Spanish." },
         { q: "What happens if I don't pass the exam on the first try?", a: "You can retake the exam at no additional cost within the first 90 days." },
       ],
+    },
+    gallery: {
+      label: "Real Classes",
+      title: "What every class looks like",
+      desc: "Real professionals, real results. Our CPO certifications are hands-on, in Spanish, and led by certified instructors.",
     },
     cta: { title: "Ready to get your CPO?", subtitle: "Enroll today and get immediate access to course materials.", cta: "Start now" },
   },
@@ -542,6 +631,16 @@ const en: any = {
         "State and local regulations",
         "Preparation for the official CPI exam",
       ],
+    },
+    locations: {
+      label: "Locations",
+      items: ["Virtual / Online", "Somerset, NJ", "Austin, TX", "International (Online)"]
+    },
+    pricing: {
+      label: "Certification Value",
+      standard: "Market average: up to $395",
+      psf: "PSF Price: $199",
+      note: "Best value for money in Spanish."
     },
     career: {
       label: "Career value",
@@ -788,6 +887,51 @@ const en: any = {
         generic: "Could not change password. Please try again.",
       },
     },
+  },
+  consultoria: {
+    hero: {
+      eyebrow: "Professional Services",
+      title: "Expert Consulting",
+      subtitle: "Strategic solutions for the aquatic industry. From architectural design to regulatory compliance.",
+      cta: "Request Consulting",
+    },
+    servicesLabel: "Our Specialties",
+    servicesTitle: "Strategic Services",
+    servicesDesc: "We work with the best consultants in the industry to deliver world-class solutions.",
+    servicesLink: "Learn more",
+    partnerLabel: "In partnership with world leaders",
+    cta: {
+      title: "Ready to elevate the standard of your facility?",
+      subtitle: "Our team of experts is ready to help you optimize your operations and meet all current regulations.",
+      cta: "Schedule a consultation",
+    },
+    services: [
+      { 
+        title: "Pool Management", 
+        desc: "Consulting to ensure aquatic facilities operate safely and efficiently, covering maintenance and regulations.",
+        href: "https://www.nac4h2o.com/new-york/pool-management-consulting"
+      },
+      { 
+        title: "Architectural Design", 
+        desc: "Design, engineering, and facility operation solutions for commercial and municipal aquatic facilities.",
+        href: "https://counsilmanhunsaker.com/"
+      },
+      { 
+        title: "Global Wellness Solutions", 
+        desc: "Global leader in water and wellness solutions, specializing in pool and spa design and process engineering.",
+        href: "https://barrandwray.com/"
+      },
+      { 
+        title: "Strategic Insights", 
+        desc: "Market insights to help organizations navigate complex challenges and growth opportunities.",
+        href: "https://aquaticconsultantsofamerica.com/"
+      },
+      { 
+        title: "Regulations & Expert Witness", 
+        desc: "Consulting pertaining to all aspects of swimming pool regulations, maintenance, and expert witness testimony.",
+        href: "https://pooloperationmanagement.com/consulting/"
+      }
+    ]
   },
 };
 

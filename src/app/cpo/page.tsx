@@ -61,8 +61,15 @@ export default function CpoPage() {
               </div>
               <div className="mt-6 pt-5 border-t border-white/10">
                 <p className="text-[0.65rem] text-white/40 uppercase tracking-wider mb-1">{c.card.priceLabel}</p>
-                <p className="text-3xl font-black text-gradient">$299 USD</p>
-                <p className="text-xs text-white/40 mt-1">{c.card.priceNote}</p>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-3xl font-black text-gradient">$299</p>
+                  <span className="text-xs text-white/40 uppercase font-bold tracking-tighter">USD</span>
+                </div>
+                <p className="text-[0.6rem] text-white/30 line-through mt-1">{c.pricing.standard}</p>
+                <p className="text-xs text-brand-cyan mt-1 font-medium italic">{c.pricing.note}</p>
+                <p className="text-[0.6rem] text-white/40 mt-3 flex items-center gap-1.5">
+                  <CheckCircle size={10} className="text-brand-cyan" /> {c.card.priceNote}
+                </p>
               </div>
             </div>
           </div>
@@ -77,6 +84,52 @@ export default function CpoPage() {
                 <div key={i} className="flex items-start gap-3 bg-white border border-border rounded-xl p-4">
                   <CheckCircle size={17} className="text-brand-blue shrink-0 mt-0.5" />
                   <span className="text-sm text-navy font-medium">{mod}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Locations ───────────────────────────────────── */}
+        <section className="py-20 bg-white border-y border-border/50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader 
+              label={c.locations.label} 
+              title="Presencia Global" 
+              description="Nuestras certificaciones son válidas internacionalmente y contamos con sedes físicas para exámenes presenciales." 
+            />
+            <div className="mt-10 flex flex-wrap justify-center gap-2">
+              {c.locations.items.map((loc: string) => (
+                <div key={loc} className="bg-surface border border-border rounded-full px-5 py-2 hover:border-brand-blue hover:bg-white transition-all duration-300">
+                  <span className="text-xs font-bold text-navy truncate">{loc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Gallery ─────────────────────────────────────── */}
+        <section className="py-20 bg-surface">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader label={c.gallery.label} title={c.gallery.title} description={c.gallery.desc} />
+            <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3">
+              {[
+                "/images/cpo/IMG_2684.jpg",
+                "/images/cpo/IMG_2687.jpg",
+                "/images/cpo/IMG_2688.jpg",
+                "/images/cpo/IMG_2689.jpg",
+                "/images/cpo/IMG_2690.jpg",
+                "/images/cpo/IMG_2691.jpg",
+              ].map((src, i) => (
+                <div
+                  key={i}
+                  className={`relative overflow-hidden rounded-2xl bg-navy/10 ${i === 0 || i === 5 ? "md:col-span-1 aspect-[4/3]" : "aspect-[4/3]"}`}
+                >
+                  <img
+                    src={src}
+                    alt={`CPO class photo ${i + 1}`}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
                 </div>
               ))}
             </div>

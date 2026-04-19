@@ -59,8 +59,15 @@ export default function CpiPage() {
               </div>
               <div className="mt-6 pt-5 border-t border-white/10">
                 <p className="text-[0.65rem] text-white/40 uppercase tracking-wider mb-1">{c.card.priceLabel}</p>
-                <p className="text-3xl font-black text-gradient">$199 USD</p>
-                <p className="text-xs text-white/40 mt-1">{c.card.priceNote}</p>
+                <div className="flex items-baseline gap-2">
+                  <p className="text-3xl font-black text-gradient">$199</p>
+                  <span className="text-xs text-white/40 uppercase font-bold tracking-tighter">USD</span>
+                </div>
+                <p className="text-[0.6rem] text-white/30 line-through mt-1">{c.pricing.standard}</p>
+                <p className="text-xs text-brand-cyan mt-1 font-medium italic">{c.pricing.note}</p>
+                <p className="text-[0.6rem] text-white/40 mt-3 flex items-center gap-1.5">
+                  <CheckCircle size={10} className="text-brand-cyan" /> {c.card.priceNote}
+                </p>
               </div>
             </div>
           </div>
@@ -75,6 +82,24 @@ export default function CpiPage() {
                 <div key={i} className="flex items-start gap-3 bg-white border border-border rounded-xl p-4">
                   <Search size={17} className="text-brand-blue shrink-0 mt-0.5" />
                   <span className="text-sm text-navy font-medium">{mod}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Locations ───────────────────────────────────── */}
+        <section className="py-20 bg-white border-y border-border/50">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader 
+              label={c.locations.label} 
+              title="Disponibilidad" 
+              description="Nuestras certificaciones CPI se ofrecen principalmente de manera virtual para mayor comodidad." 
+            />
+            <div className="mt-10 flex flex-wrap justify-center gap-2">
+              {c.locations.items.map((loc: string) => (
+                <div key={loc} className="bg-surface border border-border rounded-full px-5 py-2 hover:border-brand-blue hover:bg-white transition-all duration-300">
+                  <span className="text-xs font-bold text-navy truncate">{loc}</span>
                 </div>
               ))}
             </div>
