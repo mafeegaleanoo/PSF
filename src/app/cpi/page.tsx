@@ -7,9 +7,9 @@ import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
 import Image from "next/image";
 import poolBg from "../../../public/images/pool.jpg";
-import cpiImg1 from "../../../public/images/cpi/IMG_2698.jpg";
-import cpiImg2 from "../../../public/images/cpi/pexels-rdne-8293680.jpg";
-import cpiImg3 from "../../../public/images/cpi/vitaly-gariev-vBg0dxwfIYM-unsplash.jpg";
+import cpiImg1 from "../../../public/images/cpi/IMG_2700.jpg";
+import cpiImg2 from "../../../public/images/cpi/IMG_2701.jpg";
+import cpiImg3 from "../../../public/images/cpi/IMG_2702.jpg";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen, Search } from "lucide-react";
 
 export default function CpiPage() {
