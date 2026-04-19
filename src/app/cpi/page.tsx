@@ -8,8 +8,8 @@ import { useLang } from "@/lib/i18n";
 import Image from "next/image";
 import poolBg from "../../../public/images/pool.jpg";
 import cpiImg1 from "../../../public/images/cpi/IMG_2700.jpg";
-import cpiImg2 from "../../../public/images/cpi/IMG_2701.jpg";
-import cpiImg3 from "../../../public/images/cpi/IMG_2702.jpg";
+import cpiImg2 from "../../../public/images/cpi/IMG_2703.jpg";
+import cpiImg3 from "../../../public/images/cpi/IMG_2704.jpg";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen, Search } from "lucide-react";
 
 export default function CpiPage() {
@@ -113,20 +113,12 @@ export default function CpiPage() {
         <section className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <SectionHeader label={c.gallery.label} title={c.gallery.title} description={c.gallery.desc} />
-            <div className="mt-10 grid grid-cols-2 gap-3">
-              {/* Large left */}
-              <div className="relative rounded-2xl overflow-hidden aspect-[3/4]">
-                <Image src={cpiImg1} alt="CPI inspector photo 1" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              {/* Right column — 2 stacked */}
-              <div className="flex flex-col gap-3">
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-                  <Image src={cpiImg2} alt="CPI inspector photo 2" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
+            <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-3">
+              {[cpiImg1, cpiImg2, cpiImg3].map((src, i) => (
+                <div key={i} className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+                  <Image src={src} alt={`CPI photo ${i + 1}`} fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-                  <Image src={cpiImg3} alt="CPI inspector photo 3" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
