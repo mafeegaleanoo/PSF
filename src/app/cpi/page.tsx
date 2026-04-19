@@ -88,24 +88,6 @@ export default function CpiPage() {
           </div>
         </section>
 
-        {/* ── Locations ───────────────────────────────────── */}
-        <section className="py-20 bg-white border-y border-border/50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <SectionHeader 
-              label={c.locations.label} 
-              title="Disponibilidad" 
-              description="Nuestras certificaciones CPI se ofrecen principalmente de manera virtual para mayor comodidad." 
-            />
-            <div className="mt-10 flex flex-wrap justify-center gap-2">
-              {c.locations.items.map((loc: string) => (
-                <div key={loc} className="bg-surface border border-border rounded-full px-5 py-2 hover:border-brand-blue hover:bg-white transition-all duration-300">
-                  <span className="text-xs font-bold text-navy truncate">{loc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── Career value ─────────────────────────────────── */}
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
