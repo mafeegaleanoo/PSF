@@ -6,6 +6,12 @@ import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
 import Image from "next/image";
+import img1 from "../../../public/images/cpo/IMG_2684.jpg";
+import img2 from "../../../public/images/cpo/IMG_2687.jpg";
+import img3 from "../../../public/images/cpo/IMG_2688.jpg";
+import img4 from "../../../public/images/cpo/IMG_2689.jpg";
+import img5 from "../../../public/images/cpo/IMG_2690.jpg";
+import img6 from "../../../public/images/cpo/IMG_2691.jpg";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen } from "lucide-react";
 
 export default function CpoPage() {
@@ -114,14 +120,7 @@ export default function CpoPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <SectionHeader label={c.gallery.label} title={c.gallery.title} description={c.gallery.desc} />
             <div className="mt-10 grid grid-cols-2 md:grid-cols-3 gap-3">
-              {[
-                "/images/cpo/IMG_2684.jpg",
-                "/images/cpo/IMG_2687.jpg",
-                "/images/cpo/IMG_2688.jpg",
-                "/images/cpo/IMG_2689.jpg",
-                "/images/cpo/IMG_2690.jpg",
-                "/images/cpo/IMG_2691.jpg",
-              ].map((src, i) => (
+              {[img1, img2, img3, img4, img5, img6].map((src, i) => (
                 <div
                   key={i}
                   className="relative overflow-hidden rounded-2xl bg-navy/10 aspect-[4/3]"
