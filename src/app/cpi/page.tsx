@@ -5,6 +5,10 @@ import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
+import Image from "next/image";
+import cpiImg1 from "../../../public/images/cpi/pexels-israwmx-17030097.jpg";
+import cpiImg2 from "../../../public/images/cpi/pexels-rdne-8293680.jpg";
+import cpiImg3 from "../../../public/images/cpi/vitaly-gariev-vBg0dxwfIYM-unsplash.jpg";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen, Search } from "lucide-react";
 
 export default function CpiPage() {
@@ -110,25 +114,16 @@ export default function CpiPage() {
             <SectionHeader label={c.gallery.label} title={c.gallery.title} description={c.gallery.desc} />
             <div className="mt-10 grid grid-cols-2 grid-rows-2 gap-3 h-[480px]">
               {/* Large left */}
-              <div className="row-span-2 rounded-2xl overflow-hidden bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center">
-                <div className="text-center text-white/60">
-                  <Search size={40} className="mx-auto mb-3 opacity-40" />
-                  <p className="text-xs font-bold uppercase tracking-widest opacity-50">Foto próximamente</p>
-                </div>
+              <div className="row-span-2 relative rounded-2xl overflow-hidden">
+                <Image src={cpiImg1} alt="CPI inspector photo 1" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               {/* Top right */}
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-navy to-brand-blue flex items-center justify-center">
-                <div className="text-center text-white/60">
-                  <Search size={28} className="mx-auto mb-2 opacity-40" />
-                  <p className="text-xs font-bold uppercase tracking-widest opacity-50">Foto próximamente</p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image src={cpiImg2} alt="CPI inspector photo 2" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
               {/* Bottom right */}
-              <div className="rounded-2xl overflow-hidden bg-gradient-to-br from-brand-cyan to-navy flex items-center justify-center">
-                <div className="text-center text-white/60">
-                  <Search size={28} className="mx-auto mb-2 opacity-40" />
-                  <p className="text-xs font-bold uppercase tracking-widest opacity-50">Foto próximamente</p>
-                </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                <Image src={cpiImg3} alt="CPI inspector photo 3" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
           </div>
