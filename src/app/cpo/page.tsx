@@ -6,6 +6,7 @@ import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
 import Image from "next/image";
+import poolBg from "../../../public/images/pool.jpg";
 import img1 from "../../../public/images/cpo/IMG_2684.jpg";
 import img2 from "../../../public/images/cpo/IMG_2687.jpg";
 import img3 from "../../../public/images/cpo/IMG_2688.jpg";
@@ -137,11 +138,13 @@ export default function CpoPage() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────────── */}
-        <section className="py-16 bg-gradient-brand">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+        <section className="relative py-24 overflow-hidden">
+          <Image src={poolBg} alt="Pool background" fill unoptimized className="object-cover" />
+          <div className="absolute inset-0 bg-navy/70" />
+          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <h2 className="font-black text-[clamp(1.6rem,4vw,2.4rem)] text-white tracking-tight mb-4">{c.cta.title}</h2>
             <p className="text-white/75 text-base mb-8">{c.cta.subtitle}</p>
-            <Button href="/auth/signup" variant="secondary" size="lg" className="bg-white text-brand-blue hover:bg-white/90">
+            <Button href="/auth/signup" variant="primary" size="lg">
               {c.cta.cta} <ArrowRight size={18} />
             </Button>
           </div>
