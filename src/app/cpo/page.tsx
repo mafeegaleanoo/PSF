@@ -130,6 +130,7 @@ export default function CpoPage() {
                     src={src}
                     alt={`CPO class photo ${i + 1}`}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 50vw, 33vw"
                     className="object-cover hover:scale-105 transition-transform duration-500"
                   />
