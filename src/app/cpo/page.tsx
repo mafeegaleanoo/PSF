@@ -97,24 +97,6 @@ export default function CpoPage() {
           </div>
         </section>
 
-        {/* ── Locations ───────────────────────────────────── */}
-        <section className="py-20 bg-white border-y border-border/50">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <SectionHeader 
-              label={c.locations.label} 
-              title="Presencia Global" 
-              description="Nuestras certificaciones son válidas internacionalmente y contamos con sedes físicas para exámenes presenciales." 
-            />
-            <div className="mt-10 flex flex-wrap justify-center gap-2">
-              {c.locations.items.map((loc: string) => (
-                <div key={loc} className="bg-surface border border-border rounded-full px-5 py-2 hover:border-brand-blue hover:bg-white transition-all duration-300">
-                  <span className="text-xs font-bold text-navy truncate">{loc}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── Gallery ─────────────────────────────────────── */}
         <section className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
