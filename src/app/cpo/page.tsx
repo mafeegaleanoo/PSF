@@ -41,7 +41,7 @@ export default function CpoPage() {
                 <Button href="/auth/signup" variant="primary" size="lg">
                   {c.hero.cta1} <ArrowRight size={18} />
                 </Button>
-                <Button href="/contacto" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
+                <Button href="#temario" variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:text-white">
                   {c.hero.cta2}
                 </Button>
               </div>
@@ -83,7 +83,7 @@ export default function CpoPage() {
         </section>
 
         {/* ── Modules ──────────────────────────────────────── */}
-        <section className="py-20 bg-surface">
+        <section id="temario" className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <SectionHeader label={c.modules.label} title={c.modules.title} description={c.modules.desc} />
             <div className="mt-10 grid sm:grid-cols-2 gap-3">

@@ -80,9 +80,9 @@ const es = {
   cpo: {
     hero: {
       eyebrow: "Certificación",
-      subtitle: "La credencial más reconocida del mundo para operadores de piscinas y spas. Completamente en español para profesionales Latinos.",
+      subtitle: "La credencial más reconocida del mundo, completamente en español para profesionales Latinos.",
       cta1: "Inscribirme ahora",
-      cta2: "Más información",
+      cta2: "Ver temario",
     },
     card: {
       duration: "Duración", durationVal: "16 horas",
@@ -605,9 +605,9 @@ const en: any = {
   cpo: {
     hero: {
       eyebrow: "Certification",
-      subtitle: "The world's most recognized credential for pool and spa operators. Fully in Spanish for Latino professionals.",
+      subtitle: "The world's most recognized credential, fully in Spanish for Latino professionals.",
       cta1: "Enroll now",
-      cta2: "More information",
+      cta2: "View curriculum",
     },
     card: {
       duration: "Duration", durationVal: "16 hours",
