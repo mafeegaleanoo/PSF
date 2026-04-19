@@ -5,9 +5,10 @@ import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
-import { ArrowRight, BookOpen, MessageSquare, Video, Download, Users, Trophy } from "lucide-react";
+import { ArrowRight, BookOpen, MessageSquare, Video, Download, Users, Trophy, Waves, HardHat, Building2, Lightbulb, Scale } from "lucide-react";
 
 const offeringIcons = [Video, BookOpen, MessageSquare, Download, Users, Trophy];
+const consultingIcons = [Waves, HardHat, Building2, Lightbulb, Scale];
 
 export default function AcademiaPage() {
   const { t } = useLang();
@@ -54,6 +55,37 @@ export default function AcademiaPage() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Consulting ───────────────────────────────────── */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader label={c.consulting.label} title={c.consulting.title} description={c.consulting.desc} />
+            <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {t.consultoria.services.map((service: any, i: number) => {
+                const Icon = consultingIcons[i % consultingIcons.length];
+                return (
+                  <div key={service.title} className="group bg-surface border border-border rounded-2xl p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-brand flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Icon size={20} className="text-white" />
+                    </div>
+                    <h3 className="font-bold text-navy text-base mb-2">{service.title}</h3>
+                    <p className="text-sm text-slate leading-relaxed flex-grow mb-4">{service.desc}</p>
+                    <a href={service.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold text-brand-blue uppercase tracking-widest">
+                      {c.consulting.link} <ArrowRight size={13} />
+                    </a>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-12 bg-navy rounded-3xl p-10 text-center">
+              <h3 className="font-black text-2xl text-white mb-3">{c.consulting.cta.title}</h3>
+              <p className="text-white/60 mb-6">{c.consulting.cta.subtitle}</p>
+              <Button href="/contacto" variant="primary" size="lg">
+                {c.consulting.cta.cta} <ArrowRight size={18} />
+              </Button>
             </div>
           </div>
         </section>

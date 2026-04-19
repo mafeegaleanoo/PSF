@@ -6,7 +6,6 @@ const es = {
       { href: "/cpo",      label: "CPO" },
       { href: "/cpi",      label: "CPI" },
       { href: "/academia", label: "Academia" },
-      { href: "/consultoria", label: "Consultoría" },
       { href: "/nosotros", label: "Nosotros" },
       { href: "/contacto", label: "Contacto" },
     ],
@@ -19,8 +18,7 @@ const es = {
       Programas: [
         { href: "/cpo",      label: "Certificación CPO" },
         { href: "/cpi",      label: "Certificación CPI" },
-        { href: "/academia", label: "Academia PSF" },
-        { href: "/consultoria", label: "Consultoría" },
+        { href: "/academia", label: "Academia & Consultoría" },
       ],
       Empresa: [
         { href: "/nosotros", label: "Nosotros" },
@@ -211,6 +209,13 @@ const es = {
         { name: "Mensual", price: "$29", period: "/mes", badge: null, features: ["Acceso a todos los cursos", "Foro comunitario", "Recursos descargables"], cta: "Comenzar", featured: false },
         { name: "Anual",   price: "$199", period: "/año", badge: "Ahorra 43%", features: ["Acceso a todos los cursos", "Foro comunitario", "Recursos descargables", "Descuento en CPO y CPI", "Certificados de completación"], cta: "Mejor opción", featured: true },
       ],
+    },
+    consulting: {
+      label: "Consultoría",
+      title: "Servicios Estratégicos",
+      desc: "Trabajamos con los mejores consultores de la industria para ofrecer soluciones de primer nivel.",
+      link: "Más información",
+      cta: { title: "¿Necesitas una consultoría personalizada?", subtitle: "Nuestro equipo de expertos está listo para ayudarte.", cta: "Contactar ahora" },
     },
   },
   nosotros: {
@@ -526,7 +531,6 @@ const en: any = {
       { href: "/cpo",      label: "CPO" },
       { href: "/cpi",      label: "CPI" },
       { href: "/academia", label: "Academy" },
-      { href: "/consultoria", label: "Consulting" },
       { href: "/nosotros", label: "About Us" },
       { href: "/contacto", label: "Contact" },
     ],
@@ -539,8 +543,7 @@ const en: any = {
       Programs: [
         { href: "/cpo",      label: "CPO Certification" },
         { href: "/cpi",      label: "CPI Certification" },
-        { href: "/academia", label: "PSF Academy" },
-        { href: "/consultoria", label: "Consulting" },
+        { href: "/academia", label: "Academy & Consulting" },
       ],
       Company: [
         { href: "/nosotros", label: "About Us" },
@@ -731,6 +734,13 @@ const en: any = {
         { name: "Monthly", price: "$29", period: "/mo",  badge: null,       features: ["Access to all courses", "Community forum", "Downloadable resources"], cta: "Get started", featured: false },
         { name: "Annual",  price: "$199", period: "/yr", badge: "Save 43%", features: ["Access to all courses", "Community forum", "Downloadable resources", "Discount on CPO and CPI", "Completion certificates"], cta: "Best value", featured: true },
       ],
+    },
+    consulting: {
+      label: "Consulting",
+      title: "Strategic Services",
+      desc: "We work with the best consultants in the industry to deliver world-class solutions.",
+      link: "Learn more",
+      cta: { title: "Need personalized consulting?", subtitle: "Our team of experts is ready to help you.", cta: "Contact us" },
     },
   },
   nosotros: {
