@@ -458,12 +458,64 @@ const es = {
         desc: "Análisis del mercado para ayudar a las organizaciones a navegar desafíos complejos y oportunidades de crecimiento.",
         href: "https://aquaticconsultantsofamerica.com/"
       },
-      { 
-        title: "Regulaciones y Peritaje", 
+      {
+        title: "Regulaciones y Peritaje",
         desc: "Consultoría en todos los aspectos de regulaciones de piscinas, mantenimiento y testimonio de expertos.",
         href: "https://pooloperationmanagement.com/consulting/"
       }
     ]
+  },
+  privacy: {
+    eyebrow: "Legal",
+    title: "Política de Privacidad",
+    effective: "Fecha efectiva: 25 de julio de 2025",
+    intro: "En Piscinas Sin Fronteras valoramos profundamente su confianza y estamos comprometidos con la protección de su privacidad. Esta política describe cómo recopilamos, usamos, divulgamos y protegemos su información personal.",
+    sections: [
+      {
+        title: "1. Información que Recopilamos",
+        content: "Recopilamos información de identificación personal como nombre, correo electrónico, teléfono y dirección; detalles de citas y horarios; información de pago (procesada por proveedores externos); credenciales de cuenta; y contenido de comunicaciones. También recopilamos información no identificable como datos de uso, direcciones IP, tipo de dispositivo, sistema operativo e información general de geolocalización.",
+      },
+      {
+        title: "2. Métodos de Recopilación",
+        content: "La información se recopila directamente de los usuarios, de forma automática mediante cookies y balizas web, y de proveedores de servicios externos.",
+      },
+      {
+        title: "3. Uso de la Información",
+        content: "Utilizamos los datos recopilados para prestar servicios, comunicarnos con los usuarios, personalizar experiencias, mejorar nuestra oferta, procesar pagos, enviar materiales de marketing (con consentimiento), detectar fraudes y cumplir con obligaciones legales.",
+      },
+      {
+        title: "4. Compartir Información",
+        content: "No vendemos datos personales. Podemos compartirlos con proveedores de servicios, para el cumplimiento legal, durante transferencias comerciales o con consentimiento explícito del usuario.",
+      },
+      {
+        title: "5. Seguridad de los Datos",
+        content: "Implementamos medidas de seguridad técnicas, administrativas y físicas razonables. Sin embargo, reconocemos que ningún método es 100% seguro.",
+      },
+      {
+        title: "6. Retención de Datos",
+        content: "La información se conserva únicamente el tiempo necesario para los fines establecidos o según lo exija la ley.",
+      },
+      {
+        title: "7. Sus Derechos de Privacidad",
+        content: "Según su jurisdicción, puede tener derechos para acceder, corregir, eliminar, objetar, restringir, portar o retirar el consentimiento sobre sus datos personales.",
+      },
+      {
+        title: "8. Enlaces a Terceros",
+        content: "Nuestro sitio web puede contener enlaces a sitios externos. Le recomendamos revisar sus políticas de privacidad por separado.",
+      },
+      {
+        title: "9. Privacidad de Menores",
+        content: "Nuestros servicios no están dirigidos a menores de 18 años y no recopilamos intencionalmente información de menores.",
+      },
+      {
+        title: "10. Cambios en esta Política",
+        content: "Las actualizaciones se publicarán con fechas efectivas revisadas en esta página.",
+      },
+      {
+        title: "11. Contacto",
+        content: "Para preguntas sobre esta política, contáctenos en: rgaleano@thepoolscientist.com · (561) 617-6028 · 9825 Marina Blvd., Boca Raton, FL 33428",
+      },
+    ],
   },
 };
 
@@ -926,12 +978,31 @@ const en: any = {
         desc: "Market insights to help organizations navigate complex challenges and growth opportunities.",
         href: "https://aquaticconsultantsofamerica.com/"
       },
-      { 
-        title: "Regulations & Expert Witness", 
+      {
+        title: "Regulations & Expert Witness",
         desc: "Consulting pertaining to all aspects of swimming pool regulations, maintenance, and expert witness testimony.",
         href: "https://pooloperationmanagement.com/consulting/"
       }
     ]
+  },
+  privacy: {
+    eyebrow: "Legal",
+    title: "Privacy Policy",
+    effective: "Effective Date: July 25, 2025",
+    intro: "At Piscinas Sin Fronteras we deeply value your trust and are committed to protecting your privacy. This policy describes how we collect, use, disclose, and protect your personal information.",
+    sections: [
+      { title: "1. Information We Collect", content: "We collect personally identifiable information such as name, email, phone, and address; appointment and scheduling details; payment information (processed by third-party providers); account credentials; and communication content. We also collect non-personally identifiable information such as usage data, IP addresses, device type, operating system, and general geolocation information." },
+      { title: "2. Collection Methods", content: "Information is gathered directly from users, automatically through cookies and web beacons, and from third-party service providers." },
+      { title: "3. How We Use Information", content: "We use collected data to provide services, communicate with users, personalize experiences, improve our offerings, process payments, send marketing materials (with consent), detect fraud, and comply with legal obligations." },
+      { title: "4. Information Sharing", content: "We do not sell personal data. We may share it with service providers, for legal compliance, during business transfers, or with explicit user consent." },
+      { title: "5. Data Security", content: "We implement reasonable technical, administrative, and physical security measures. However, we acknowledge that no method is 100% secure." },
+      { title: "6. Data Retention", content: "Information is retained only as long as necessary for stated purposes or as required by law." },
+      { title: "7. Your Privacy Rights", content: "Depending on your jurisdiction, you may have rights to access, correct, delete, object to, restrict, port, or withdraw consent regarding your personal data." },
+      { title: "8. Third-Party Links", content: "Our website may contain links to external sites. We encourage you to review their privacy policies separately." },
+      { title: "9. Children's Privacy", content: "Our services are not directed to individuals under 18 and we do not knowingly collect information from minors." },
+      { title: "10. Policy Changes", content: "Updates will be posted with revised effective dates on this page." },
+      { title: "11. Contact", content: "For questions about this policy, contact us at: rgaleano@thepoolscientist.com · (561) 617-6028 · 9825 Marina Blvd., Boca Raton, FL 33428" },
+    ],
   },
 };
 
