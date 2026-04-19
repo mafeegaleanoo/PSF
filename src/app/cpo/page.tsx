@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
+import Image from "next/image";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen } from "lucide-react";
 
 export default function CpoPage() {
@@ -123,12 +124,14 @@ export default function CpoPage() {
               ].map((src, i) => (
                 <div
                   key={i}
-                  className={`relative overflow-hidden rounded-2xl bg-navy/10 ${i === 0 || i === 5 ? "md:col-span-1 aspect-[4/3]" : "aspect-[4/3]"}`}
+                  className="relative overflow-hidden rounded-2xl bg-navy/10 aspect-[4/3]"
                 >
-                  <img
+                  <Image
                     src={src}
                     alt={`CPO class photo ${i + 1}`}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className="object-cover hover:scale-105 transition-transform duration-500"
                   />
                 </div>
               ))}
