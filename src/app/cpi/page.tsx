@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
 import Image from "next/image";
-import cpiImg1 from "../../../public/images/cpi/pexels-bertellifotografia-18999482.jpg";
+import cpiImg1 from "../../../public/images/cpi/IMG_2698.jpg";
 import cpiImg2 from "../../../public/images/cpi/pexels-rdne-8293680.jpg";
 import cpiImg3 from "../../../public/images/cpi/vitaly-gariev-vBg0dxwfIYM-unsplash.jpg";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen, Search } from "lucide-react";
