@@ -181,6 +181,11 @@ const es = {
         { title: "Cumplimiento legal",desc: "Muchos estados requieren inspecciones por inspectores certificados. Conviértete en el experto de tu área." },
       ],
     },
+    gallery: {
+      label: "En Acción",
+      title: "Inspectores CPI en el campo",
+      desc: "Así trabajan nuestros inspectores certificados: con rigor, profesionalismo y el respaldo de una credencial reconocida.",
+    },
     cta: { title: "Conviértete en Inspector Certificado", subtitle: "Accede al material del curso de inmediato después de inscribirte.", cta: "Comenzar ahora" },
   },
   academia: {
@@ -705,6 +710,11 @@ const en: any = {
         { title: "Differentiation",     desc: "Stand out from the competition with an official credential that demonstrates your level of knowledge and professionalism." },
         { title: "Legal compliance",    desc: "Many states require inspections by certified inspectors. Become the expert in your area." },
       ],
+    },
+    gallery: {
+      label: "In Action",
+      title: "CPI Inspectors in the field",
+      desc: "This is how our certified inspectors work: with rigor, professionalism, and the backing of a recognized credential.",
     },
     cta: { title: "Become a Certified Inspector", subtitle: "Access course materials immediately after enrolling.", cta: "Start now" },
   },

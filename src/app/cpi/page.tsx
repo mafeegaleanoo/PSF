@@ -5,6 +5,10 @@ import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import { useLang } from "@/lib/i18n";
+import Image from "next/image";
+import ph1 from "../../../public/images/cpi/placeholder-1.svg";
+import ph2 from "../../../public/images/cpi/placeholder-2.svg";
+import ph3 from "../../../public/images/cpi/placeholder-3.svg";
 import { CheckCircle, Clock, Award, Users, ArrowRight, BookOpen, Search } from "lucide-react";
 
 export default function CpiPage() {
@@ -100,6 +104,27 @@ export default function CpiPage() {
                   <p className="text-sm text-slate leading-relaxed">{desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Gallery ─────────────────────────────────────── */}
+        <section className="py-20 bg-surface">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader label={c.gallery.label} title={c.gallery.title} description={c.gallery.desc} />
+            <div className="mt-10 grid grid-cols-2 grid-rows-2 gap-3 h-[480px]">
+              {/* Large left image */}
+              <div className="row-span-2 relative overflow-hidden rounded-2xl">
+                <Image src={ph1} alt="CPI inspector photo 1" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              {/* Top-right image */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <Image src={ph2} alt="CPI inspector photo 2" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
+              {/* Bottom-right image */}
+              <div className="relative overflow-hidden rounded-2xl">
+                <Image src={ph3} alt="CPI inspector photo 3" fill unoptimized className="object-cover hover:scale-105 transition-transform duration-500" />
+              </div>
             </div>
           </div>
         </section>
