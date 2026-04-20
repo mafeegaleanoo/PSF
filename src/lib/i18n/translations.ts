@@ -15,7 +15,7 @@ const es = {
     signup: "Inscríbete",
   },
   footer: {
-    tagline: "Unidos por el agua. Conectados por el oficio.",
+    tagline: "El agua nos une. La profesión nos conecta.",
     columns: {
       Programas: [
         { href: "/cpo",      label: "Certificación CPO" },
