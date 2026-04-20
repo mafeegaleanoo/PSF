@@ -131,7 +131,7 @@ const es = {
       title: "Lo que vivimos en cada clase",
       desc: "Profesionales reales, resultados reales. Así son nuestras certificaciones CPO: prácticas, en español y con instructores certificados.",
     },
-    cta: { title: "¿Listo para obtener tu CPO?", subtitle: "Inscríbete hoy y obtén acceso inmediato al material del curso.", cta: "Comenzar ahora" },
+    cta: { title: "¿Listo para obtener tu CPO?", subtitle: "Inscríbete hoy y únete a los profesionales certificados en toda Latinoamérica.", cta: "Comenzar ahora" },
   },
   cpi: {
     hero: {
@@ -186,7 +186,7 @@ const es = {
       title: "Inspectores CPI en el campo",
       desc: "Así trabajan nuestros inspectores certificados: con rigor, profesionalismo y el respaldo de una credencial reconocida.",
     },
-    cta: { title: "Conviértete en Inspector Certificado", subtitle: "Accede al material del curso de inmediato después de inscribirte.", cta: "Comenzar ahora" },
+    cta: { title: "¿Listo para obtener tu CPI?", subtitle: "Inscríbete hoy y únete a los profesionales certificados en toda Latinoamérica.", cta: "Comenzar ahora" },
   },
   academia: {
     hero: {
@@ -661,7 +661,7 @@ const en: any = {
       title: "What every class looks like",
       desc: "Real professionals, real results. Our CPO certifications are hands-on, in Spanish, and led by certified instructors.",
     },
-    cta: { title: "Ready to get your CPO?", subtitle: "Enroll today and get immediate access to course materials.", cta: "Start now" },
+    cta: { title: "Ready to get your CPO?", subtitle: "Enroll today and join certified professionals across Latin America.", cta: "Start now" },
   },
   cpi: {
     hero: {
@@ -716,7 +716,7 @@ const en: any = {
       title: "CPI Inspectors in the field",
       desc: "This is how our certified inspectors work: with rigor, professionalism, and the backing of a recognized credential.",
     },
-    cta: { title: "Become a Certified Inspector", subtitle: "Access course materials immediately after enrolling.", cta: "Start now" },
+    cta: { title: "Ready to get your CPI?", subtitle: "Enroll today and join certified professionals across Latin America.", cta: "Start now" },
   },
   academia: {
     hero: {

@@ -124,12 +124,12 @@ export default function CpiPage() {
         </section>
 
         {/* ── CTA ──────────────────────────────────────────── */}
-        <section className="relative py-24 overflow-hidden">
-          <Image src={poolBg} alt="Pool background" fill unoptimized className="object-cover" />
-          <div className="absolute inset-0 bg-navy/70" />
-          <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <h2 className="font-black text-[clamp(1.6rem,4vw,2.4rem)] text-white tracking-tight mb-4">{c.cta.title}</h2>
-            <p className="text-white/75 text-base mb-8">{c.cta.subtitle}</p>
+        <section className="relative py-28 overflow-hidden">
+          <Image src={poolBg} alt="Pool background" fill unoptimized className="object-cover object-center" />
+          <div className="absolute inset-0 bg-navy/75" />
+          <div className="relative w-full px-4 sm:px-6 text-center">
+            <h2 className="font-black text-[clamp(2rem,5vw,3.2rem)] text-white tracking-tight mb-5">{c.cta.title}</h2>
+            <p className="text-white/75 text-lg mb-10 max-w-2xl mx-auto">{c.cta.subtitle}</p>
             <Button href="/auth/signup" variant="primary" size="lg">
               {c.cta.cta} <ArrowRight size={18} />
             </Button>
