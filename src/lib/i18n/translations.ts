@@ -3,12 +3,13 @@ export type Lang = "es" | "en";
 const es = {
   nav: {
     links: [
-      { href: "/nosotros", label: "Nosotros" },
+      { href: "/nosotros",  label: "Nosotros" },
+      { href: "/community", label: "Comunidad" },
       { label: "Certificaciones", children: [
         { href: "/cpo", label: "CPO — Operador Certificado" },
         { href: "/cpi", label: "CPI — Inspector Certificado" },
       ]},
-      { href: "/academia", label: "Academia" },
+      { href: "/learn",    label: "Aprende" },
       { href: "/contacto", label: "Contacto" },
     ],
     login:  "Iniciar Sesión",
@@ -17,14 +18,20 @@ const es = {
   footer: {
     tagline: "El agua nos une. La profesión nos conecta.",
     columns: {
-      Programas: [
-        { href: "/cpo",      label: "Certificación CPO" },
-        { href: "/cpi",      label: "Certificación CPI" },
-        { href: "/academia", label: "Academia & Consultoría" },
+      Comunidad: [
+        { href: "/community", label: "La Comunidad" },
+        { href: "/learn",     label: "Aprende" },
+        { href: "/events",    label: "Eventos" },
+        { href: "/academia",  label: "Academia" },
+      ],
+      Certificaciones: [
+        { href: "/cpo",        label: "Certificación CPO" },
+        { href: "/cpi",        label: "Certificación CPI" },
       ],
       Empresa: [
-        { href: "/nosotros", label: "Nosotros" },
-        { href: "/contacto", label: "Contacto" },
+        { href: "/nosotros",   label: "Nosotros" },
+        { href: "/consulting", label: "Consultoría" },
+        { href: "/contacto",   label: "Contacto" },
       ],
       Legal: [
         { href: "/privacidad", label: "Privacidad" },
@@ -35,11 +42,11 @@ const es = {
   },
   home: {
     hero: {
-      eyebrow: "La comunidad bilingüe de profesionales del agua",
+      eyebrow: "La comunidad de profesionales Latinos del agua",
       titlePre: "El hogar profesional para la",
       highlight: "gente de piscinas",
       titlePost: "",
-      subtitle: "El agua nos une. La profesión nos conecta. Únete gratis a la comunidad bilingüe donde profesionales del agua aprenden, crecen y se certifican juntos.",
+      subtitle: "El agua nos une. La profesión nos conecta. Únete gratis a la comunidad donde técnicos Latinos de piscinas aprenden, crecen y se certifican juntos.",
       cta1: "Únete gratis",
       cta2: "Ver certificaciones",
     },
@@ -52,11 +59,11 @@ const es = {
     community: {
       label: "La comunidad",
       title: "Un lugar donde el oficio se celebra",
-      desc: "Pregunta, aprende, conecta y crece. En español o en inglés, siempre hay alguien aquí que entiende tu trabajo.",
+      desc: "Pregunta, aprende, conecta y crece. Siempre hay alguien aquí que entiende tu trabajo, habla tu idioma y viene del mismo mundo que tú.",
       cta: "Únete gratis — sin tarjeta de crédito",
       pillars: [
-        { title: "Pregunta", desc: "Resuelve dudas técnicas con otros profesionales que trabajan en campo, no teoría." },
-        { title: "Aprende", desc: "Accede a recursos gratuitos, guías y contenido creado por expertos de la industria." },
+        { title: "Pregunta", desc: "Resuelve dudas técnicas con otros profesionales Latinos que trabajan en campo, no teoría." },
+        { title: "Aprende", desc: "Accede a recursos gratuitos, guías y contenido creado en español para el técnico Latino." },
         { title: "Conecta", desc: "Encuentra colegas de tu país, tu región y tu especialidad en una sola comunidad." },
         { title: "Certifícate", desc: "Cuando estés listo, obtén tu CPO o CPI — las credenciales más reconocidas del sector." },
       ],
@@ -76,9 +83,9 @@ const es = {
     why: {
       label: "¿Por qué PSF?",
       title: "Construido diferente — a propósito",
-      desc: "No somos otra plataforma de cursos. Somos la comunidad que la industria del agua nunca tuvo.",
+      desc: "No somos otra plataforma de cursos. Somos la comunidad que el profesional Latino del agua nunca tuvo.",
       items: [
-        { title: "Bilingüe por diseño",       desc: "Español e inglés, lado a lado. Cada función, cada página, cada conversación." },
+        { title: "En español, para ti",        desc: "Contenido, exámenes, soporte y comunidad en tu idioma. Sin barreras, sin excepciones." },
         { title: "Comunidad primero",          desc: "El aprendizaje entre pares viene antes que las transacciones. Aquí perteneces antes de comprar." },
         { title: "Misión sin fines de lucro", desc: "La confianza sobre el beneficio. Los ingresos de las certificaciones sostienen la misión comunitaria." },
         { title: "Gratis para unirse",         desc: "Sin barrera de entrada. La membresía es gratuita. Crece a tu ritmo." },
@@ -280,7 +287,7 @@ const es = {
   nosotros: {
     hero: {
       eyebrow: "Nuestra historia",
-      title: "El hogar global de los profesionales del agua —",
+      title: "El hogar de los profesionales Latinos del agua —",
       subtitle: "donde el idioma nunca es una barrera para aprender, crecer y ser reconocido.",
     },
     story: {
@@ -530,6 +537,144 @@ const es = {
       }
     ]
   },
+  community: {
+    hero: {
+      eyebrow: "Únete gratis",
+      title: "La comunidad que los profesionales Latinos del agua siempre merecieron",
+      subtitle: "Un espacio donde técnicos de piscinas se reúnen, hacen preguntas, comparten lo que saben y construyen carreras de las que enorgullecerse. En español, para ti.",
+      cta1: "Crear cuenta gratis",
+      cta2: "Conocer más",
+    },
+    what: {
+      label: "¿Qué es la comunidad PSF?",
+      title: "Más que un foro — un hogar profesional",
+      desc: "Un espacio donde el oficio se celebra, las dudas se resuelven entre pares y las credenciales significan algo.",
+      items: [
+        { title: "Foro en español",        desc: "Publica preguntas y comparte respuestas en tu idioma. Sin barreras, sin filtros." },
+        { title: "Categorías por oficio",  desc: "Química del agua, equipos, negocios, seguridad — encuentra exactamente lo que necesitas." },
+        { title: "Capítulos por país",     desc: "Conecta con profesionales de tu región. Hay comunidad cerca de donde estás." },
+        { title: "Perfiles profesionales", desc: "Muestra tu experiencia, tus certificaciones y tu trayectoria. Sé visto como el profesional que eres." },
+      ],
+    },
+    steps: {
+      label: "¿Cómo funciona?",
+      title: "Tres pasos para empezar",
+      items: [
+        { step: "01", title: "Crea tu cuenta gratis",      desc: "Regístrate en menos de 2 minutos. Sin tarjeta de crédito, sin compromisos." },
+        { step: "02", title: "Completa tu perfil",         desc: "Cuéntanos en qué trabajas, dónde estás y qué quieres aprender o aportar." },
+        { step: "03", title: "Únete a la conversación",    desc: "Haz tu primera pregunta, responde a un colega o explora el foro. La comunidad ya está viva." },
+      ],
+    },
+    founding: {
+      eyebrow: "Miembros fundadores",
+      title: "Sé parte desde el principio",
+      desc: "Los primeros 50 miembros fundadores tendrán acceso anticipado, precio especial en certificaciones y su nombre en la historia de PSF.",
+      cta: "Unirme como miembro fundador",
+      perks: [
+        "Acceso anticipado a la plataforma completa",
+        "Precio especial en certificaciones CPO y CPI",
+        "Tu nombre en la historia de PSF",
+        "Badge exclusivo de miembro fundador",
+      ],
+    },
+  },
+  learn: {
+    hero: {
+      eyebrow: "Biblioteca gratuita",
+      title: "El conocimiento que nadie te dio — ahora en español",
+      subtitle: "Guías, videos y recursos descargables creados para el técnico Latino que aprendió solo y quiere seguir creciendo. Gratis para todos los miembros.",
+      cta1: "Acceder gratis",
+      cta2: "Ver categorías",
+    },
+    categories: {
+      label: "Categorías",
+      title: "Encuentra lo que necesitas",
+      items: [
+        { title: "Química del agua",   desc: "Balance, desinfección, tratamientos. Todo lo que necesitas saber para mantener el agua segura y cristalina.", icon: "droplets" },
+        { title: "Equipos y sistemas", desc: "Bombas, filtros, circulación y automatización. Guías de troubleshooting paso a paso.", icon: "wrench" },
+        { title: "Negocios y carrera", desc: "Cómo cobrar, contratos, marketing, y cómo crecer como profesional independiente.", icon: "briefcase" },
+        { title: "Seguridad acuática", desc: "Normativas, prevención de accidentes y cumplimiento de regulaciones estatales y federales.", icon: "shield" },
+        { title: "Inspección",         desc: "Protocolos de inspección, documentación y mejores prácticas para inspectores certificados.", icon: "clipboard" },
+        { title: "Certificaciones",    desc: "Guías de estudio, preguntas de práctica y recursos de preparación para CPO y CPI.", icon: "award" },
+      ],
+    },
+    coming: {
+      eyebrow: "Próximamente",
+      title: "La biblioteca se está construyendo",
+      desc: "Estamos produciendo el primer lote de contenido. Los miembros fundadores tendrán acceso anticipado a todos los recursos el día del lanzamiento.",
+      cta: "Unirme para acceder primero",
+    },
+  },
+  consulting: {
+    hero: {
+      eyebrow: "Para organizaciones",
+      title: "Forma a tu equipo. Certifica a tu fuerza laboral.",
+      subtitle: "Programas de certificación en español para empresas de piscinas, municipios, HOAs y programas de desarrollo laboral que quieren invertir en sus técnicos Latinos.",
+      cta1: "Solicitar información",
+      cta2: "Ver servicios",
+    },
+    who: {
+      label: "¿Para quién es?",
+      title: "Trabajamos con organizaciones que invierten en su gente",
+      items: [
+        { title: "Empresas de servicio de piscinas", desc: "Certifica a todo tu equipo técnico con descuentos por volumen y programas personalizados." },
+        { title: "Municipios y parques acuáticos",   desc: "Cumplimiento regulatorio y formación para operadores de instalaciones públicas." },
+        { title: "HOAs y propiedades residenciales", desc: "Certifica al personal que opera y mantiene las piscinas comunitarias." },
+        { title: "Programas de desarrollo laboral",  desc: "Integra las certificaciones PSF en tus programas de formación para fuerza laboral Latina." },
+      ],
+    },
+    services: {
+      label: "Servicios",
+      title: "¿Qué ofrecemos?",
+      items: [
+        { title: "Certificación en grupo",   desc: "Precios especiales para grupos de 5 o más. CPO y CPI con instrucción en español." },
+        { title: "Formación in-situ",        desc: "Llevamos el curso a tus instalaciones. Flexibilidad de fechas y grupos adaptados a tu operación." },
+        { title: "Contenido con tu marca",   desc: "Co-branding del material de formación con la identidad visual de tu organización." },
+        { title: "Seguimiento y reportes",   desc: "Panel de progreso, tasas de aprobación y certificados digitales para cada miembro de tu equipo." },
+      ],
+    },
+    form: {
+      label: "Solicitar información",
+      title: "Cuéntanos sobre tu organización",
+      name: "Nombre completo", namePh: "Tu nombre",
+      org: "Organización", orgPh: "Nombre de tu empresa o institución",
+      email: "Correo electrónico", emailPh: "correo@tuempresa.com",
+      size: "Tamaño del equipo", sizePh: "¿Cuántas personas necesitas certificar?",
+      message: "¿Qué necesitas?", messagePh: "Cuéntanos sobre tu proyecto, equipo y objetivos...",
+      submit: "Enviar solicitud",
+      success: "¡Gracias! Nos pondremos en contacto contigo en menos de 48 horas.",
+    },
+    cta: {
+      title: "¿Tienes un equipo que certificar?",
+      subtitle: "Escríbenos y te enviamos una propuesta personalizada en menos de 48 horas.",
+      cta: "Solicitar cotización",
+    },
+  },
+  events: {
+    hero: {
+      eyebrow: "Eventos y webinars",
+      title: "Aprende en vivo. Conecta en persona.",
+      subtitle: "Webinars técnicos, sesiones de preguntas y respuestas con expertos y encuentros presenciales para profesionales Latinos del agua — donde estés en el mundo.",
+      cta1: "Unirme para ser notificado",
+      cta2: "Ver eventos pasados",
+    },
+    types: {
+      label: "¿Qué tipo de eventos hacemos?",
+      title: "Siempre hay algo donde aprender",
+      items: [
+        { title: "Webinars técnicos",       desc: "Sesiones en vivo sobre química del agua, equipos, regulaciones y más. Con expertos certificados." },
+        { title: "Q&A en comunidad",        desc: "Sesiones abiertas donde la comunidad hace preguntas y los expertos responden en tiempo real." },
+        { title: "Eventos presenciales",    desc: "Encuentros regionales, talleres prácticos y ceremonias de certificación en distintas ciudades." },
+        { title: "Clases de certificación", desc: "Cursos CPO y CPI presenciales con instructor certificado. Consulta próximas fechas." },
+      ],
+    },
+    upcoming: {
+      label: "Próximos eventos",
+      title: "Nada programado aún",
+      desc: "Estamos preparando el primer calendario de eventos. Únete a la comunidad y serás el primero en recibir las fechas.",
+      cta: "Avisarme cuando haya eventos",
+    },
+  },
   privacy: {
     eyebrow: "Legal",
     title: "Política de Privacidad",
@@ -588,12 +733,13 @@ const es = {
 const en: any = {
   nav: {
     links: [
-      { href: "/nosotros", label: "About Us" },
+      { href: "/nosotros",  label: "About Us" },
+      { href: "/community", label: "Community" },
       { label: "Certifications", children: [
         { href: "/cpo", label: "CPO — Certified Operator" },
         { href: "/cpi", label: "CPI — Certified Inspector" },
       ]},
-      { href: "/academia", label: "Academy" },
+      { href: "/learn",    label: "Learn" },
       { href: "/contacto", label: "Contact" },
     ],
     login:  "Sign In",
@@ -602,14 +748,20 @@ const en: any = {
   footer: {
     tagline: "United by water. Connected by craft.",
     columns: {
-      Programs: [
-        { href: "/cpo",      label: "CPO Certification" },
-        { href: "/cpi",      label: "CPI Certification" },
-        { href: "/academia", label: "Academy & Consulting" },
+      Community: [
+        { href: "/community", label: "The Community" },
+        { href: "/learn",     label: "Learn" },
+        { href: "/events",    label: "Events" },
+        { href: "/academia",  label: "Academy" },
+      ],
+      Certifications: [
+        { href: "/cpo",        label: "CPO Certification" },
+        { href: "/cpi",        label: "CPI Certification" },
       ],
       Company: [
-        { href: "/nosotros", label: "About Us" },
-        { href: "/contacto", label: "Contact" },
+        { href: "/nosotros",   label: "About Us" },
+        { href: "/consulting", label: "Consulting" },
+        { href: "/contacto",   label: "Contact" },
       ],
       Legal: [
         { href: "/privacidad", label: "Privacy" },
@@ -620,11 +772,11 @@ const en: any = {
   },
   home: {
     hero: {
-      eyebrow: "The bilingual community for water professionals",
+      eyebrow: "The professional community for Latino pool workers",
       titlePre: "The professional home for",
       highlight: "pool people",
       titlePost: "",
-      subtitle: "United by water. Connected by craft. Join the bilingual community where pool professionals learn, grow, and get certified together — for free.",
+      subtitle: "United by water. Connected by craft. Join the community where Latino pool professionals learn, grow, and get certified — in Spanish, for free.",
       cta1: "Join free",
       cta2: "View certifications",
     },
@@ -661,9 +813,9 @@ const en: any = {
     why: {
       label: "Why PSF?",
       title: "Built different — on purpose",
-      desc: "We're not another course platform. We're the professional community the pool industry never had.",
+      desc: "We're not another course platform. We're the professional community the Latino pool worker never had.",
       items: [
-        { title: "Bilingual by design",   desc: "Spanish and English, side by side. Every feature, every page, every conversation." },
+        { title: "In Spanish, for you",   desc: "Content, exams, support, and community in your language. No exceptions." },
         { title: "Community-first",       desc: "Peer learning comes before transactions. You belong here before you ever buy anything." },
         { title: "Nonprofit mission",     desc: "Trust over profit. Revenue from certifications sustains the community mission." },
         { title: "Free to join",          desc: "No barrier to entry. Membership is free. Grow at your own pace." },
@@ -865,7 +1017,7 @@ const en: any = {
   nosotros: {
     hero: {
       eyebrow: "Our story",
-      title: "The global home for water professionals —",
+      title: "The home for Latino water professionals —",
       subtitle: "where language is never a barrier to learning, growing, and being recognized.",
     },
     story: {
@@ -1114,6 +1266,144 @@ const en: any = {
         href: "https://pooloperationmanagement.com/consulting/"
       }
     ]
+  },
+  community: {
+    hero: {
+      eyebrow: "Join free",
+      title: "The professional community Latino pool workers always deserved",
+      subtitle: "A space where pool technicians come together, ask questions, share what they know, and build careers they're proud of. In Spanish, for you.",
+      cta1: "Create free account",
+      cta2: "Learn more",
+    },
+    what: {
+      label: "What is the PSF community?",
+      title: "More than a forum — a professional home",
+      desc: "A space where the craft is celebrated, questions get answered by peers, and credentials mean something.",
+      items: [
+        { title: "Forum in Spanish",       desc: "Post questions and share answers in your language. No barriers, no filters." },
+        { title: "Topic categories",       desc: "Water chemistry, equipment, business, safety — find exactly what you need." },
+        { title: "Country chapters",       desc: "Connect with professionals from your region. Community is close to where you are." },
+        { title: "Professional profiles",  desc: "Show your experience, certifications, and career. Be seen as the professional you are." },
+      ],
+    },
+    steps: {
+      label: "How does it work?",
+      title: "Three steps to get started",
+      items: [
+        { step: "01", title: "Create your free account",  desc: "Sign up in under 2 minutes. No credit card, no commitment." },
+        { step: "02", title: "Complete your profile",     desc: "Tell us what you do, where you are, and what you want to learn or contribute." },
+        { step: "03", title: "Join the conversation",    desc: "Ask your first question, answer a peer, or explore the forum. The community is already alive." },
+      ],
+    },
+    founding: {
+      eyebrow: "Founding members",
+      title: "Be part of it from the beginning",
+      desc: "The first 50 founding members will get early access, special pricing on certifications, and their name in PSF history.",
+      cta: "Join as a founding member",
+      perks: [
+        "Early access to the full platform",
+        "Special pricing on CPO and CPI certifications",
+        "Your name in PSF history",
+        "Exclusive founding member badge",
+      ],
+    },
+  },
+  learn: {
+    hero: {
+      eyebrow: "Free library",
+      title: "The knowledge no one gave you — now in Spanish",
+      subtitle: "Guides, videos, and downloadable resources made for the Latino technician who learned on their own and wants to keep growing. Free for all members.",
+      cta1: "Access for free",
+      cta2: "View categories",
+    },
+    categories: {
+      label: "Categories",
+      title: "Find what you need",
+      items: [
+        { title: "Water Chemistry",     desc: "Balance, disinfection, treatments. Everything you need to keep water safe and crystal clear.", icon: "droplets" },
+        { title: "Equipment & Systems", desc: "Pumps, filters, circulation systems, and automation. Step-by-step troubleshooting guides.", icon: "wrench" },
+        { title: "Business & Career",   desc: "How to price your work, contracts, marketing, and growing as an independent professional.", icon: "briefcase" },
+        { title: "Aquatic Safety",      desc: "Regulations, accident prevention, and state and federal compliance requirements.", icon: "shield" },
+        { title: "Inspection",          desc: "Inspection protocols, documentation, and best practices for certified inspectors.", icon: "clipboard" },
+        { title: "Certifications",      desc: "Study guides, practice questions, and preparation resources for CPO and CPI.", icon: "award" },
+      ],
+    },
+    coming: {
+      eyebrow: "Coming soon",
+      title: "The library is being built",
+      desc: "We're producing the first batch of content. Founding members will get early access to all resources on launch day.",
+      cta: "Join to be first in line",
+    },
+  },
+  consulting: {
+    hero: {
+      eyebrow: "For organizations",
+      title: "Train your team. Certify your workforce.",
+      subtitle: "Spanish-language certification programs for pool service companies, municipalities, HOAs, and workforce development programs that want to invest in their Latino technicians.",
+      cta1: "Request information",
+      cta2: "View services",
+    },
+    who: {
+      label: "Who is it for?",
+      title: "We work with organizations that invest in their people",
+      items: [
+        { title: "Pool service companies",        desc: "Certify your entire technical team with volume discounts and customized programs." },
+        { title: "Municipalities & water parks",  desc: "Regulatory compliance and training for operators of public aquatic facilities." },
+        { title: "HOAs & residential properties", desc: "Certify the staff that operates and maintains community pools." },
+        { title: "Workforce development programs",desc: "Integrate PSF certifications into your workforce training programs for Latino workers." },
+      ],
+    },
+    services: {
+      label: "Services",
+      title: "What do we offer?",
+      items: [
+        { title: "Group certification",  desc: "Special pricing for groups of 5 or more. CPO and CPI instruction delivered in Spanish." },
+        { title: "On-site training",     desc: "We bring the course to your facility. Flexible scheduling tailored to your operation." },
+        { title: "Co-branded content",   desc: "Training materials co-branded with your organization's visual identity." },
+        { title: "Progress & reporting", desc: "Progress dashboard, pass rates, and digital certificates for every team member." },
+      ],
+    },
+    form: {
+      label: "Request information",
+      title: "Tell us about your organization",
+      name: "Full name", namePh: "Your name",
+      org: "Organization", orgPh: "Your company or institution name",
+      email: "Email address", emailPh: "you@yourcompany.com",
+      size: "Team size", sizePh: "How many people need to be certified?",
+      message: "What do you need?", messagePh: "Tell us about your project, team, and goals...",
+      submit: "Send request",
+      success: "Thank you! We'll be in touch within 48 hours.",
+    },
+    cta: {
+      title: "Do you have a team to certify?",
+      subtitle: "Write to us and we'll send you a personalized proposal within 48 hours.",
+      cta: "Request a quote",
+    },
+  },
+  events: {
+    hero: {
+      eyebrow: "Events & webinars",
+      title: "Learn live. Connect in person.",
+      subtitle: "Technical webinars, expert Q&A sessions, and in-person meetups for Latino pool professionals — wherever you are in the world.",
+      cta1: "Join to be notified",
+      cta2: "View past events",
+    },
+    types: {
+      label: "What kind of events do we host?",
+      title: "There's always something to learn",
+      items: [
+        { title: "Technical webinars",    desc: "Live sessions on water chemistry, equipment, regulations, and more. With certified experts." },
+        { title: "Community Q&A",         desc: "Open sessions where the community asks questions and experts answer in real time." },
+        { title: "In-person meetups",     desc: "Regional gatherings, hands-on workshops, and certification ceremonies in different cities." },
+        { title: "Certification classes", desc: "In-person CPO and CPI courses with certified instructors. Check upcoming dates." },
+      ],
+    },
+    upcoming: {
+      label: "Upcoming events",
+      title: "Nothing scheduled yet",
+      desc: "We're preparing the first event calendar. Join the community and you'll be the first to receive dates.",
+      cta: "Notify me when there are events",
+    },
   },
   privacy: {
     eyebrow: "Legal",
