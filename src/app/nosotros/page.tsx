@@ -25,7 +25,7 @@ export default function NosotrosPage() {
               {c.hero.eyebrow}
             </p>
             <h1 className="font-black text-[clamp(2rem,5vw,3.2rem)] leading-[1.1] tracking-tight text-white mb-5">
-              {c.hero.title} <span className="text-gradient">Piscinas Sin Fronteras</span>
+              {c.hero.title}
             </h1>
             <p className="text-white/60 text-base leading-relaxed max-w-2xl mx-auto">
               {c.hero.subtitle}
