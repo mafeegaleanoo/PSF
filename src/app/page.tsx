@@ -5,14 +5,15 @@ import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Logo from "@/components/ui/Logo";
-import { GraduationCap, ArrowRight, CheckCircle, Globe, ShieldCheck, Users, BookOpen } from "lucide-react";
+import { ArrowRight, CheckCircle, Globe, Shield, Users, Sprout, MessageCircle, BookOpen, Link2, Award } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 
-const whyIcons = [Globe, ShieldCheck, Users, BookOpen];
+const whyIcons  = [Globe, Users, Shield, Sprout];
+const pillarIcons = [MessageCircle, BookOpen, Link2, Award];
 
 export default function HomePage() {
   const { t } = useLang();
-  const { hero, stats, programs, why, cta } = t.home;
+  const { hero, stats, community, programs, why, cta } = t.home;
 
   return (
     <>
@@ -31,17 +32,16 @@ export default function HomePage() {
               <h1 className="font-black text-[clamp(2.4rem,5vw,3.6rem)] leading-[1.1] tracking-tight text-white mb-6">
                 {hero.titlePre}{" "}
                 <span className="text-gradient">{hero.highlight}</span>
-                {" "}{hero.titlePost}
               </h1>
               <p className="text-base text-white/60 leading-[1.8] max-w-lg mb-8">
                 {hero.subtitle}
               </p>
               <div className="flex flex-wrap gap-3">
-                <Button href="/cpo" variant="primary" size="lg">
+                <Button href="/auth/signup" variant="primary" size="lg">
                   {hero.cta1} <ArrowRight size={18} />
                 </Button>
                 <Button
-                  href="/nosotros"
+                  href="/cpo"
                   variant="outline"
                   size="lg"
                   className="border-white/30 text-white hover:bg-white/10 hover:text-white"
@@ -69,15 +69,36 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* ── Programs ─────────────────────────────────────── */}
+        {/* ── Community teaser ─────────────────────────────── */}
         <section className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <SectionHeader
-              label={programs.label}
-              title={programs.title}
-              description={programs.desc}
-              center
-            />
+            <SectionHeader label={community.label} title={community.title} description={community.desc} center />
+            <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {community.pillars.map(({ title, desc }, i) => {
+                const Icon = pillarIcons[i];
+                return (
+                  <div key={title} className="bg-white border border-border rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-brand mb-4">
+                      <Icon size={22} className="text-white" />
+                    </div>
+                    <h3 className="font-bold text-navy text-base mb-2">{title}</h3>
+                    <p className="text-sm text-slate leading-relaxed">{desc}</p>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="mt-10 text-center">
+              <Button href="/auth/signup" variant="primary" size="lg">
+                {community.cta} <ArrowRight size={18} />
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Certifications ───────────────────────────────── */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader label={programs.label} title={programs.title} description={programs.desc} center />
             <div className="mt-12 grid md:grid-cols-3 gap-6">
               {programs.items.map((p) => (
                 <div
@@ -93,44 +114,24 @@ export default function HomePage() {
                       {programs.featuredBadge}
                     </span>
                   )}
-                  <p
-                    className={`text-[0.72rem] font-bold tracking-[0.15em] uppercase mb-2 ${
-                      p.featured ? "text-brand-cyan" : "text-brand-blue"
-                    }`}
-                  >
+                  <p className={`text-[0.72rem] font-bold tracking-[0.15em] uppercase mb-2 ${p.featured ? "text-brand-cyan" : "text-brand-blue"}`}>
                     {p.badge}
                   </p>
-                  <h3
-                    className={`font-black text-lg leading-snug mb-3 ${
-                      p.featured ? "text-white" : "text-navy"
-                    }`}
-                  >
+                  <h3 className={`font-black text-lg leading-snug mb-3 ${p.featured ? "text-white" : "text-navy"}`}>
                     {p.title}
                   </h3>
-                  <p
-                    className={`text-sm leading-relaxed mb-5 flex-1 ${
-                      p.featured ? "text-white/55" : "text-slate"
-                    }`}
-                  >
+                  <p className={`text-sm leading-relaxed mb-5 flex-1 ${p.featured ? "text-white/55" : "text-slate"}`}>
                     {p.description}
                   </p>
                   <ul className="flex flex-col gap-2 mb-6">
                     {p.features.map((f) => (
                       <li key={f} className="flex items-center gap-2 text-sm">
-                        <CheckCircle
-                          size={15}
-                          className={p.featured ? "text-brand-cyan" : "text-brand-blue"}
-                        />
+                        <CheckCircle size={15} className={p.featured ? "text-brand-cyan" : "text-brand-blue"} />
                         <span className={p.featured ? "text-white/70" : "text-slate"}>{f}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button
-                    href={p.href}
-                    variant={p.featured ? "primary" : "outline"}
-                    size="md"
-                    className="w-full"
-                  >
+                  <Button href={p.href} variant={p.featured ? "primary" : "outline"} size="md" className="w-full">
                     {programs.cta} <ArrowRight size={16} />
                   </Button>
                 </div>
@@ -140,22 +141,14 @@ export default function HomePage() {
         </section>
 
         {/* ── Why PSF ──────────────────────────────────────── */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <SectionHeader
-              label={why.label}
-              title={why.title}
-              description={why.desc}
-              center
-            />
+            <SectionHeader label={why.label} title={why.title} description={why.desc} center />
             <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {why.items.map(({ title, desc }, i) => {
                 const Icon = whyIcons[i];
                 return (
-                  <div
-                    key={title}
-                    className="rounded-2xl bg-surface border border-border p-6 text-center hover:shadow-md transition-shadow"
-                  >
+                  <div key={title} className="rounded-2xl bg-white border border-border p-6 text-center hover:shadow-md transition-shadow">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-brand mb-4">
                       <Icon size={22} className="text-white" />
                     </div>
@@ -169,10 +162,12 @@ export default function HomePage() {
         </section>
 
         {/* ── CTA Banner ───────────────────────────────────── */}
-        <section className="py-20 bg-navy relative overflow-hidden">
+        <section className="py-24 bg-navy relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,158,219,.15)_0%,transparent_70%)] pointer-events-none" />
           <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-            <GraduationCap size={40} className="text-brand-blue mx-auto mb-5" />
+            <p className="text-[0.7rem] font-bold tracking-[0.18em] uppercase text-brand-cyan mb-5">
+              {why.label}
+            </p>
             <h2 className="font-black text-[clamp(1.8rem,4vw,2.8rem)] text-white tracking-tight mb-4">
               {cta.title}
             </h2>
@@ -184,7 +179,7 @@ export default function HomePage() {
                 {cta.cta1} <ArrowRight size={18} />
               </Button>
               <Button
-                href="/contacto"
+                href="/nosotros"
                 variant="outline"
                 size="lg"
                 className="border-white/30 text-white hover:bg-white/10 hover:text-white"
