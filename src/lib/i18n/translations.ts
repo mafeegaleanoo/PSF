@@ -15,7 +15,7 @@ const es = {
     signup: "Inscríbete",
   },
   footer: {
-    tagline: "La plataforma líder en educación de piscinas en español, diseñada para profesionales Latinos.",
+    tagline: "Unidos por el agua. Conectados por el oficio.",
     columns: {
       Programas: [
         { href: "/cpo",      label: "Certificación CPO" },
@@ -588,7 +588,7 @@ const en: any = {
     signup: "Enroll Now",
   },
   footer: {
-    tagline: "The leading pool education platform in Spanish, designed for Latino professionals.",
+    tagline: "United by water. Connected by craft.",
     columns: {
       Programs: [
         { href: "/cpo",      label: "CPO Certification" },
