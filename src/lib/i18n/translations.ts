@@ -116,6 +116,26 @@ const es = {
       psf: "Precio PSF: $299",
       note: "Ahorra más del 20% certificándote con nosotros."
     },
+    audience: {
+      label: "¿Para quién es?",
+      title: "Diseñado para profesionales del agua",
+      items: [
+        { title: "Nuevos en la industria", desc: "Sin experiencia previa requerida. El punto de partida ideal para comenzar tu carrera en acuática." },
+        { title: "Operadores de instalaciones", desc: "Hoteles, condominios, parques acuáticos y cualquier facility con piscina comercial o residencial." },
+        { title: "Técnicos de mantenimiento", desc: "Amplía tus conocimientos con la credencial oficial más reconocida de la industria a nivel mundial." },
+        { title: "Profesionales en transición", desc: "El primer paso en el PHTA Certified Pool Service Professional Pathway. Más de 700,000 certificados desde 1973." },
+      ],
+    },
+    exam: {
+      label: "Detalles del curso",
+      title: "Todo sobre el programa CPO",
+      items: [
+        { label: "Duración", value: "16 horas totales" },
+        { label: "Modalidad", value: "Presencial (2 días) o Blended (online + 1 día)" },
+        { label: "Validez", value: "5 años" },
+        { label: "Retoma", value: "Gratis dentro de los primeros 90 días" },
+      ],
+    },
     faq: {
       label: "Preguntas frecuentes",
       title: "Todo lo que necesitas saber",
@@ -665,6 +685,26 @@ const en: any = {
       standard: "Industry average: $350 - $475",
       psf: "PSF Price: $299",
       note: "Save over 20% by getting certified with us."
+    },
+    audience: {
+      label: "Who is it for?",
+      title: "Designed for aquatic professionals",
+      items: [
+        { title: "Industry newcomers", desc: "No prior experience required. The ideal starting point to launch your career in aquatics." },
+        { title: "Facility operators", desc: "Hotels, condominiums, water parks and any facility with a commercial or residential pool." },
+        { title: "Maintenance technicians", desc: "Expand your knowledge with the world's most recognized official credential in the industry." },
+        { title: "Career changers", desc: "The first step on the PHTA Certified Pool Service Professional Pathway. 700,000+ certified since 1973." },
+      ],
+    },
+    exam: {
+      label: "Program details",
+      title: "Everything about the CPO program",
+      items: [
+        { label: "Duration", value: "16 hours total" },
+        { label: "Format", value: "Classroom (2 days) or Blended (online + 1 day)" },
+        { label: "Valid for", value: "5 years" },
+        { label: "Retake", value: "Free within the first 90 days" },
+      ],
     },
     faq: {
       label: "Frequently asked questions",

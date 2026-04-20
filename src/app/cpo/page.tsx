@@ -83,6 +83,22 @@ export default function CpoPage() {
           </div>
         </section>
 
+        {/* ── Audience ─────────────────────────────────────── */}
+        <section className="py-20 bg-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <SectionHeader label={c.audience.label} title={c.audience.title} center />
+            <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {c.audience.items.map(({ title, desc }) => (
+                <div key={title} className="rounded-2xl bg-surface border border-border p-6">
+                  <div className="w-2 h-8 rounded-full bg-gradient-brand mb-4" />
+                  <h3 className="font-bold text-navy text-base mb-2">{title}</h3>
+                  <p className="text-sm text-slate leading-relaxed">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Modules ──────────────────────────────────────── */}
         <section id="temario" className="py-20 bg-surface">
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -92,6 +108,21 @@ export default function CpoPage() {
                 <div key={i} className="flex items-start gap-3 bg-white border border-border rounded-xl p-4">
                   <CheckCircle size={17} className="text-brand-blue shrink-0 mt-0.5" />
                   <span className="text-sm text-navy font-medium">{mod}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Program details ───────────────────────────────── */}
+        <section className="py-20 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <SectionHeader label={c.exam.label} title={c.exam.title} center />
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {c.exam.items.map(({ label, value }) => (
+                <div key={label} className="bg-surface border border-border rounded-2xl p-6 text-center">
+                  <p className="text-[0.65rem] font-bold uppercase tracking-widest text-brand-blue mb-2">{label}</p>
+                  <p className="text-sm font-bold text-navy leading-snug">{value}</p>
                 </div>
               ))}
             </div>
