@@ -40,7 +40,8 @@ export default function NosotrosPage() {
               <div>
                 <SectionHeader label={c.story.label} title={c.story.title} />
                 <p className="text-slate text-base leading-relaxed mb-4">{c.story.body1}</p>
-                <p className="text-slate text-base leading-relaxed mb-6">{c.story.body2}</p>
+                <p className="text-slate text-base leading-relaxed mb-4">{c.story.body2}</p>
+                <p className="text-slate text-base leading-relaxed mb-6">{c.story.body3}</p>
                 <Button href="/cpo" variant="primary" size="md">
                   {c.story.cta} <ArrowRight size={16} />
                 </Button>

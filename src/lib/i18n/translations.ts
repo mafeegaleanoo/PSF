@@ -272,10 +272,11 @@ const es = {
       subtitle: "donde el idioma nunca es una barrera para aprender, crecer y ser reconocido.",
     },
     story: {
-      label: "El problema que resolvemos",
-      title: "La industria de piscinas no tiene comunidad real",
-      body1: "Foros dispersos, técnicos aislados, conocimiento que nunca se comparte. Los profesionales del agua —en español o en inglés— han crecido solos, sin un lugar donde el oficio sea celebrado, las preguntas tengan respuesta y las credenciales signifiquen algo.",
-      body2: "PSF existe para cerrar esa brecha. Somos la comunidad bilingüe líder para profesionales de piscinas a nivel mundial: un espacio donde hispanohablantes e ingleshablantes aprenden juntos, comparten experiencia real y obtienen credenciales que reflejan su expertise.",
+      label: "Quiénes somos",
+      title: "Piscinas Sin Fronteras nació de una convicción simple",
+      body1: "El idioma nunca debería ser una barrera para convertirse en un gran profesional de piscinas. La industria está llena de técnicos talentosos y trabajadores —en EE.UU., América Latina y en todas partes— que aprendieron su oficio por prueba y error, con lo que encontraban por su cuenta. Nunca ha existido un hogar profesional real para ellos: un lugar central para hacer preguntas, compartir conocimiento, ser reconocidos y crecer.",
+      body2: "Por eso existe PSF. Somos una comunidad bilingüe para profesionales del agua — hispanohablantes e ingleshablantes aprendiendo juntos, resolviendo problemas reales y construyendo carreras de las que enorgullecerse. Las certificaciones importan, pero no son la razón por la que existimos. Existimos porque la persona detrás de la certificación importa más.",
+      body3: "Seas un técnico experimentado, un nuevo dueño de negocio, o algo intermedio — aquí perteneces. PSF es el lugar al que vienes a crecer, conectarte y ser reconocido como el profesional que eres.",
       cta: "Ver programas",
     },
     stats: [
@@ -844,10 +845,11 @@ const en: any = {
       subtitle: "where language is never a barrier to learning, growing, and being recognized.",
     },
     story: {
-      label: "The problem we solve",
-      title: "The pool industry has no real community",
-      body1: "Scattered forums, isolated technicians, knowledge that never gets shared. Pool professionals — in Spanish or in English — have grown alone, without a place where the craft is celebrated, questions get answered, and credentials mean something.",
-      body2: "PSF exists to close that gap. We are the leading bilingual community for pool professionals worldwide: a space where Spanish and English speakers learn alongside each other, share real-world knowledge, and earn credentials that reflect their expertise.",
+      label: "About Us",
+      title: "Piscinas Sin Fronteras was built on a simple belief",
+      body1: "Language should never be a barrier to becoming a great pool professional. The pool industry is full of talented, hardworking technicians — in the US, Latin America, and everywhere in between — who have learned their craft through trial, error, and whatever they could find on their own. There has never been a real professional home for them. No central place to ask questions, share knowledge, get recognized, or grow.",
+      body2: "That's why PSF exists. We are a bilingual community for pool and water professionals — English and Spanish speakers learning alongside each other, solving real problems together, and building careers they're proud of. Certifications matter to us — but they're not why we exist. We exist because the person behind the certification matters more.",
+      body3: "Whether you're a seasoned technician, a new business owner, or somewhere in between — you belong here. PSF is where you come to grow, connect, and be seen as the professional you are.",
       cta: "View programs",
     },
     stats: [
