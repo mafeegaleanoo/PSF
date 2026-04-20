@@ -3,8 +3,10 @@ export type Lang = "es" | "en";
 const es = {
   nav: {
     links: [
-      { href: "/cpo",      label: "CPO" },
-      { href: "/cpi",      label: "CPI" },
+      { label: "Certificaciones", children: [
+        { href: "/cpo", label: "CPO — Operador Certificado" },
+        { href: "/cpi", label: "CPI — Inspector Certificado" },
+      ]},
       { href: "/academia", label: "Academia" },
       { href: "/nosotros", label: "Nosotros" },
       { href: "/contacto", label: "Contacto" },
@@ -573,8 +575,10 @@ const es = {
 const en: any = {
   nav: {
     links: [
-      { href: "/cpo",      label: "CPO" },
-      { href: "/cpi",      label: "CPI" },
+      { label: "Certifications", children: [
+        { href: "/cpo", label: "CPO — Certified Operator" },
+        { href: "/cpi", label: "CPI — Certified Inspector" },
+      ]},
       { href: "/academia", label: "Academy" },
       { href: "/nosotros", label: "About Us" },
       { href: "/contacto", label: "Contact" },
