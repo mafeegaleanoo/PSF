@@ -172,13 +172,33 @@ const es = {
       psf: "Precio PSF: $199",
       note: "La mejor relación calidad-precio en español."
     },
+    audience: {
+      label: "¿Para quién es?",
+      title: "Diseñado para profesionales del agua",
+      items: [
+        { title: "Funcionarios de salud pública", desc: "Inspectores y agentes de cumplimiento que supervisan instalaciones acuáticas." },
+        { title: "Operadores de piscinas", desc: "Operadores certificados CPO que desean ampliar su alcance profesional con inspecciones." },
+        { title: "Técnicos de servicio", desc: "Profesionales de mantenimiento que buscan diferenciarse con una credencial oficial de alto valor." },
+        { title: "Empresas y contratistas", desc: "Empresas que quieren ofrecer inspecciones certificadas como servicio premium a sus clientes." },
+      ],
+    },
+    exam: {
+      label: "Detalles del examen",
+      title: "Examen oficial CPI",
+      items: [
+        { label: "Formato", value: "Libro abierto · 1 hora" },
+        { label: "Preguntas", value: "35 preguntas de opción múltiple" },
+        { label: "Nota para aprobar", value: "75%" },
+        { label: "Modalidad", value: "En línea (proctored) o presencial" },
+      ],
+    },
     career: {
       label: "Valor de carrera",
       title: "¿Por qué convertirte en CPI?",
       items: [
-        { title: "Nuevos ingresos",   desc: "Ofrece inspecciones de piscinas como servicio premium a hoteles, condominios y propiedades residenciales." },
-        { title: "Diferenciación",    desc: "Destácate de la competencia con una credencial oficial que demuestra tu nivel de conocimiento y profesionalismo." },
-        { title: "Cumplimiento legal",desc: "Muchos estados requieren inspecciones por inspectores certificados. Conviértete en el experto de tu área." },
+        { title: "Nuevos ingresos", desc: "Ofrece inspecciones certificadas como servicio premium a hoteles, condominios y propiedades residenciales." },
+        { title: "Cumplimiento del Acta VGB", desc: "Garantiza el cumplimiento de la Virginia Graeme Baker Act y regulaciones de seguridad en instalaciones acuáticas." },
+        { title: "Reconocimiento profesional", desc: "Credencial oficial PHTA reconocida en todo EE.UU. Conviértete en el experto certificado de tu área." },
       ],
     },
     gallery: {
@@ -706,9 +726,29 @@ const en: any = {
       label: "Career value",
       title: "Why become a CPI?",
       items: [
-        { title: "New revenue streams", desc: "Offer pool inspections as a premium service to hotels, condominiums and residential properties." },
-        { title: "Differentiation",     desc: "Stand out from the competition with an official credential that demonstrates your level of knowledge and professionalism." },
-        { title: "Legal compliance",    desc: "Many states require inspections by certified inspectors. Become the expert in your area." },
+        { title: "New revenue streams", desc: "Offer certified inspections as a premium service to hotels, condominiums and residential properties." },
+        { title: "VGB Act compliance", desc: "Ensure compliance with the Virginia Graeme Baker Act and aquatic facility safety regulations." },
+        { title: "Professional recognition", desc: "Official PHTA credential recognized across the U.S. Become the certified expert in your area." },
+      ],
+    },
+    audience: {
+      label: "Who is it for?",
+      title: "Designed for aquatic professionals",
+      items: [
+        { title: "Public health officials", desc: "Inspectors and code enforcement officers who oversee aquatic facilities." },
+        { title: "Pool operators", desc: "CPO-certified operators looking to expand their professional reach with inspections." },
+        { title: "Service technicians", desc: "Maintenance professionals seeking to stand out with a high-value official credential." },
+        { title: "Companies & contractors", desc: "Businesses that want to offer certified inspections as a premium service to their clients." },
+      ],
+    },
+    exam: {
+      label: "Exam details",
+      title: "Official CPI exam",
+      items: [
+        { label: "Format", value: "Open-book · 1 hour" },
+        { label: "Questions", value: "35 multiple-choice questions" },
+        { label: "Passing score", value: "75%" },
+        { label: "Testing", value: "Online (proctored) or in-person" },
       ],
     },
     gallery: {
