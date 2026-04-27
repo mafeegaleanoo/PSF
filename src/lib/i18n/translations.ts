@@ -286,44 +286,68 @@ const es = {
   },
   nosotros: {
     hero: {
-      eyebrow: "Nuestra historia",
-      title: "El hogar de los profesionales Latinos del agua —",
-      subtitle: "donde el idioma nunca es una barrera para aprender, crecer y ser reconocido.",
+      eyebrow: "Sobre nosotros",
+      title: "Una comunidad profesional hecha por y para profesionales Latinos de piscinas.",
+      subtitle: "Estamos aquí para reconocer tu expertise, conectarte con tus pares y ayudarte a crecer — sin importar dónde estés o de dónde vengas.",
     },
-    story: {
+    who: {
       label: "Quiénes somos",
-      title: "Piscinas Sin Fronteras nació de una convicción simple",
-      body1: "El idioma nunca debería ser una barrera para convertirse en un gran profesional de piscinas. La industria está llena de técnicos talentosos y trabajadores —en EE.UU., América Latina y en todas partes— que aprendieron su oficio por prueba y error, con lo que encontraban por su cuenta. Nunca ha existido un hogar profesional real para ellos: un lugar central para hacer preguntas, compartir conocimiento, ser reconocidos y crecer.",
-      body2: "Por eso existe PSF. Somos una comunidad Latina para profesionales del agua — técnicos que aprenden juntos, resuelven problemas reales y construyen carreras de las que enorgullecerse. Las certificaciones importan, pero no son la razón por la que existimos. Existimos porque la persona detrás de la certificación importa más.",
-      body3: "Seas un técnico experimentado, un nuevo dueño de negocio, o algo intermedio — aquí perteneces. PSF es el lugar al que vienes a crecer, conectarte y ser reconocido como el profesional que eres.",
-      cta: "Ver programas",
+      title: "Quiénes somos",
+      body1: "Piscinas Sin Fronteras (PSF) es una comunidad profesional y plataforma para profesionales Latinos de piscinas en Estados Unidos y América Latina. Servimos a técnicos, dueños de negocio, gerentes, especialistas y emprendedores — cualquiera que esté construyendo una carrera o negocio en la industria de piscinas.",
+      body2: "No somos una empresa de capacitación. No somos una firma de consultoría. Somos una comunidad que cree que los profesionales Latinos de piscinas merecen un espacio profesional que reconozca el alcance completo de su trabajo: la experiencia técnica, los retos del negocio, las decisiones de liderazgo y las ambiciones de crecimiento.",
+      gap: {
+        label: "La brecha que llenamos",
+        desc: "Aunque existen asociaciones y plataformas de la industria convencional, no sirven a la comunidad Latina de profesionales de piscinas. No hay red de pares para quien está aprendiendo el oficio. No hay espacio profesional para que dueños y gerentes se conecten, compartan retos y crezcan juntos. PSF existe para cerrar esa brecha.",
+      },
     },
-    stats: [
-      { value: "2018",   label: "Año de fundación" },
-      { value: "2,000+", label: "Certificados" },
-      { value: "60+",    label: "Países" },
-      { value: "98%",    label: "Aprobación" },
-    ],
-    values: {
-      label: "Lo que nos mueve",
-      title: "Visión, misión y propósito",
-      items: [
-        { title: "Visión",    desc: "Un hogar global para profesionales del agua donde el idioma nunca sea una barrera para aprender, crecer y ser reconocido." },
-        { title: "Misión",    desc: "Construir la comunidad Latina líder para profesionales de piscinas a nivel mundial — donde los técnicos aprendan juntos, compartan conocimiento real y obtengan credenciales que reflejan su expertise." },
-        { title: "Propósito", desc: "PSF existe porque la industria de piscinas no tiene una verdadera comunidad profesional. Cerramos esa brecha para hispanohablantes e ingleshablantes por igual, uniéndolos en un espacio donde el oficio es celebrado, las preguntas tienen respuesta y las credenciales significan algo." },
+    mission: {
+      label: "Misión y valores",
+      title: "Nuestra Misión y Valores",
+      quote: "\"Un mundo donde cada profesional Latino de piscinas — sin importar su país de origen, nivel educativo o años de experiencia — tiene acceso a una comunidad que lo ayuda a crecer.\"",
+      desc: "Conectamos, educamos y elevamos a los profesionales Latinos de piscinas a través de apoyo entre pares, recursos gratuitos en español y rutas claras hacia la certificación y el crecimiento profesional.",
+      values: [
+        { title: "La Comunidad Primero",    desc: "La membresía es gratuita. Construimos confianza antes de pedir transacciones. Únete a nuestra comunidad, experimenta el valor, luego decide si las opciones avanzadas son para ti." },
+        { title: "Liderazgo Latino",        desc: "No traducido. No adaptado. Construido desde cero por alguien inmerso en esta comunidad, para la experiencia del profesional Latino." },
+        { title: "Respeto Profesional",     desc: "Te vemos como un profesional — alguien que gestiona operaciones, dirige equipos y toma decisiones de negocio. No un trabajador de servicios. Un par." },
+        { title: "Sin Fronteras",           desc: "Nuestro nombre significa 'piscinas sin fronteras'. Geografía, barreras de idioma, nivel educativo — ninguno de estos limita la membresía en nuestra comunidad." },
+        { title: "Primero el Async",        desc: "Llegamos a ti donde estás. Temporada alta o baja, diferentes zonas horarias — todo el contenido funciona en tu horario, no en el nuestro." },
+        { title: "Enfocados en el Crecimiento", desc: "Ya sea que estés aprendiendo el oficio o escalando a operaciones multi-sede, PSF está diseñado para ayudarte a avanzar." },
       ],
     },
-    tps: {
-      eyebrow: "Nuestra marca padre",
-      title: "by The Pool Scientist",
-      desc: "Piscinas Sin Fronteras es una marca bajo The Pool Scientist (TPS), la empresa líder en capacitación y consultoría para la industria acuática en EE.UU.",
-      cta: "Contáctanos",
-      bullets: [
-        "Comunidad Latina: un espacio hecho para ti",
-        "Contenido desarrollado por instructores certificados PHTA",
-        "Más de 15 años de experiencia en educación acuática",
-        "Presencia en más de 60 países",
+    howItWorks: {
+      label: "Cómo funciona",
+      title: "Lo que hacemos",
+      desc: "Somos una plataforma de tres partes:",
+      parts: [
+        { step: "1", title: "Comunidad Profesional Gratuita",      desc: "Únete gratis. Conéctate con pares que entienden tus retos. Haz preguntas, comparte logros, aprende de las experiencias de otros. Nuestra comunidad es donde se construye la confianza." },
+        { step: "2", title: "Recursos y Contenido Profesional",     desc: "Videos cortos (TikTok, Instagram), correos semanales, guías de expertos y capacitaciones grabadas sobre química del agua, gestión de negocio, equipo, estrategia de precios y más. Todo en español e inglés. Todo async — trabaja en tu horario." },
+        { step: "3", title: "Desarrollo Profesional y Crecimiento", desc: "Para quienes están listos para avanzar: certificaciones profesionales, membresías premium, capacitación de equipos para empresas, consultoría para dueños de negocio y bolsa de trabajo. Todo opcional. Todo disponible solo después de que hayas experimentado el valor de nuestra comunidad." },
       ],
+    },
+    why: {
+      label: "Por qué somos diferentes",
+      title: "Por qué PSF es diferente",
+      boxes: [
+        { title: "No te pedimos que pagues para pertenecer",        bullets: ["Membresía comunitaria gratuita — para siempre. Sin tarifas ocultas. Sin paywall para participar.", "Damos valor primero. Construimos confianza. Luego te invitamos a invertir en tu propio crecimiento."] },
+        { title: "Estamos construidos por alguien que lo entiende", bullets: ["No estudiado desde afuera. Construido por alguien inmerso en esta comunidad.", "Conocemos el idioma, los retos, la cultura y las necesidades no satisfechas."] },
+        { title: "Trabajamos async (en tu horario)",                bullets: ["¿Temporada alta? ¿Baja? ¿Diferente zona horaria? No hay problema.", "Todo el contenido es on-demand. Sin webinar en vivo al que tengas que asistir. Sin FOMO. Solo valor cuando estés listo."] },
+        { title: "No intentamos venderte deuda",                    bullets: ["Las certificaciones son asequibles y opcionales. La membresía premium es opcional. La consultoría es opcional.", "Todo está diseñado para ayudarte, no para extraer el máximo de ingresos."] },
+      ],
+    },
+    bottomLine: {
+      label: "La conclusión",
+      title: "La Conclusión",
+      body: "Eres un profesional. Estás resolviendo problemas reales. Estás construyendo algo. Mereces un espacio profesional que lo reconozca — no uno que te trate como un trabajador de servicios o un estudiante al que venderle.",
+      body2: "PSF es ese espacio.",
+      quote1es: "El agua nos une.",
+      quote1en: "The water unites us.",
+      quote2es: "El oficio nos conecta.",
+      quote2en: "The craft connects us.",
+    },
+    cta: {
+      title: "¿Listo para unirte?",
+      desc: "Únete a miles de profesionales Latinos de piscinas que desarrollan sus habilidades, se conectan con pares y hacen crecer sus operaciones.",
+      btn: "Unirme a PSF (Gratis)",
     },
   },
   contacto: {
@@ -807,7 +831,7 @@ const en: any = {
       items: [
         { badge: "CPO", title: "Certified Pool & Spa Operator", description: "The world's most recognized pool credential. 700,000+ certified since 1973. Now available in Spanish.", features: ["Official PHTA certificate", "Taught in Spanish", "Exam included"], href: "/cpo", featured: true },
         { badge: "CPI", title: "Certified Pool Inspector", description: "Become a certified inspector and expand your services. A high-value credential for independent pros and companies.", features: ["Certified inspections", "Bilingual: Spanish & English", "Exam included"], href: "/cpi", featured: false },
-        { badge: "Academy", title: "PSF Academy", description: "Continuing education, resources, and original courses designed for water professionals at every stage of their career.", features: ["Exclusive PSF courses", "Active community", "Lifetime access"], href: "/academia", featured: false },
+        { badge: "Academy", title: "PSF Academy", description: "Continuing education, resources, and original courses designed for pool professionals at every stage of their career.", features: ["Exclusive PSF courses", "Active community", "Lifetime access"], href: "/academia", featured: false },
       ],
     },
     why: {
@@ -1016,44 +1040,68 @@ const en: any = {
   },
   nosotros: {
     hero: {
-      eyebrow: "Our story",
-      title: "The home for Latino water professionals —",
-      subtitle: "where language is never a barrier to learning, growing, and being recognized.",
+      eyebrow: "About Us",
+      title: "A professional community built by and for Latino pool professionals.",
+      subtitle: "We're here to recognize your expertise, connect you with peers, and help you grow — no matter where you are or where you started.",
     },
-    story: {
-      label: "About Us",
-      title: "Piscinas Sin Fronteras was built on a simple belief",
-      body1: "Language should never be a barrier to becoming a great pool professional. The pool industry is full of talented, hardworking technicians — in the US, Latin America, and everywhere in between — who have learned their craft through trial, error, and whatever they could find on their own. There has never been a real professional home for them. No central place to ask questions, share knowledge, get recognized, or grow.",
-      body2: "That's why PSF exists. We are a Latino community for pool and water professionals — technicians learning alongside each other, solving real problems together, and building careers they're proud of. Certifications matter to us — but they're not why we exist. We exist because the person behind the certification matters more.",
-      body3: "Whether you're a seasoned technician, a new business owner, or somewhere in between — you belong here. PSF is where you come to grow, connect, and be seen as the professional you are.",
-      cta: "View programs",
+    who: {
+      label: "Who We Are",
+      title: "Who We Are",
+      body1: "Piscinas Sin Fronteras (PSF) is a professional community and platform for Latino pool professionals across the United States and Latin America. We serve technicians, service owners, managers, specialists, and entrepreneurs — anyone building a career or business in the pool industry.",
+      body2: "We're not a training company. We're not a consulting firm. We're a community that believes Latino pool professionals deserve a professional space that recognizes the full scope of their work: the technical expertise, the business challenges, the leadership decisions, and the growth ambitions.",
+      gap: {
+        label: "The Gap We Fill",
+        desc: "While mainstream industry associations and platforms exist, they don't serve the Latino pool professional community. There's no peer network for someone learning the trade. There's no professional space for owners and managers to connect, share challenges, and grow together. PSF exists to close that gap.",
+      },
     },
-    stats: [
-      { value: "2018",   label: "Founded" },
-      { value: "2,000+", label: "Certified" },
-      { value: "60+",    label: "Countries" },
-      { value: "98%",    label: "Pass rate" },
-    ],
-    values: {
-      label: "What drives us",
-      title: "Vision, mission and purpose",
-      items: [
-        { title: "Vision",   desc: "A global home for pool and water professionals where language is never a barrier to learning, growing, and being recognized." },
-        { title: "Mission",  desc: "To build the leading Latino community for pool professionals worldwide — where technicians learn alongside each other, share real-world knowledge, and earn credentials that reflect their expertise." },
-        { title: "Purpose",  desc: "PSF exists because the pool industry has no true professional community — just scattered forums, isolated technicians, and knowledge that never gets shared. PSF closes that gap for Spanish and English speakers alike, bringing them into one space where craft is celebrated, questions get answered, and credentials mean something." },
+    mission: {
+      label: "Mission & Values",
+      title: "Our Mission & Values",
+      quote: "\"A world where every Latino pool professional — regardless of country of origin, education level, or years of experience — has access to a community that helps them grow.\"",
+      desc: "We connect, educate, and elevate Latino pool professionals through peer support, free Spanish-language resources, and clear pathways to professional certification and growth.",
+      values: [
+        { title: "Community First",      desc: "Membership is free. We build trust before asking for transactions. Join our community, experience the value, then decide if advanced offerings are right for you." },
+        { title: "Latino-Led",           desc: "Not translated. Not adapted. Built from the ground up by someone embedded in this community, for the Latino professional experience." },
+        { title: "Professional Respect", desc: "We see you as a professional — someone running operations, managing teams, making business decisions. Not a service worker. A peer." },
+        { title: "No Borders",           desc: "Our name means 'pools without borders.' Geography, language barriers, education level — none of these gate-keep membership in our community." },
+        { title: "Async First",          desc: "We meet you where you are. Peak season vs off-season, different time zones — all content works on your schedule, not ours." },
+        { title: "Growth Focused",       desc: "Whether you're learning the trade or scaling to multi-location operations, PSF is designed to help you move forward." },
       ],
     },
-    tps: {
-      eyebrow: "Our parent brand",
-      title: "by The Pool Scientist",
-      desc: "Piscinas Sin Fronteras is a brand under The Pool Scientist (TPS), the leading company in training and consulting for the aquatic industry in the U.S.",
-      cta: "Contact us",
-      bullets: [
-        "Bilingual community: Spanish and English, side by side",
-        "Content developed by PHTA-certified instructors",
-        "More than 15 years of experience in aquatic education",
-        "Presence in more than 60 countries",
+    howItWorks: {
+      label: "How It Works",
+      title: "What We Do",
+      desc: "We're a three-part platform:",
+      parts: [
+        { step: "1", title: "Free Professional Community",      desc: "Join for free. Connect with peers who understand your challenges. Ask questions, share wins, learn from others' experiences. Our community is where trust is built." },
+        { step: "2", title: "Professional Resources & Content", desc: "Short-form videos (TikTok, Instagram), weekly emails, expert guides, and recorded trainings on water chemistry, business management, equipment, pricing strategy, and more. All in Spanish and English. All async — work on your schedule." },
+        { step: "3", title: "Professional Development & Growth", desc: "For those ready to advance: professional certifications, premium membership tiers, team training for companies, consulting for business owners, and a job board for career opportunities. All optional. All available only after you've experienced the value of our community." },
       ],
+    },
+    why: {
+      label: "Why We're Different",
+      title: "Why PSF Is Different",
+      boxes: [
+        { title: "We Don't Ask You to Pay to Belong",        bullets: ["Free community membership — forever. No hidden fees. No paywall to participate.", "We give value first. Build trust. Then invite you to invest in your own growth."] },
+        { title: "We're Built by Someone Who Gets It",       bullets: ["Not studied from the outside. Built by someone embedded in this community.", "We know the language, the challenges, the culture, and the unmet needs."] },
+        { title: "We Work Async (On Your Schedule)",         bullets: ["Peak season? Off season? Different time zone? No problem.", "All content is on-demand. No live webinar you have to attend. No FOMO. Just value when you're ready for it."] },
+        { title: "We're Not Trying to Sell You Into Debt",   bullets: ["Certifications are affordable and optional. Premium membership is optional. Consulting is optional.", "Everything is designed to help you, not extract maximum revenue."] },
+      ],
+    },
+    bottomLine: {
+      label: "The Bottom Line",
+      title: "The Bottom Line",
+      body: "You're a professional. You're solving real problems. You're building something. You deserve a professional space that recognizes that — not one that treats you like a service worker or a student to be sold to.",
+      body2: "PSF is that space.",
+      quote1es: "El agua nos une.",
+      quote1en: "The water unites us.",
+      quote2es: "El oficio nos conecta.",
+      quote2en: "The craft connects us.",
+    },
+    cta: {
+      title: "Ready to Join?",
+      desc: "Join thousands of Latino pool professionals building their skills, connecting with peers, and growing their operations.",
+      btn: "Join PSF Community (Free)",
     },
   },
   contacto: {
